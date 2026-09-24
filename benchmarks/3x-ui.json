@@ -1,0 +1,79 @@
+{
+  "repository": "MHSanaei/3x-ui",
+  "commit": "95f19b192f477b59cc368dcb7751bcf2e0180e5b",
+  "note": "Authored symbol-level smoke queries, not a blind benchmark. Subset consists of exactly the listed, blob-verified files; no upstream source is vendored.",
+  "files": {
+    "Dockerfile": "0a156241fa4a987a76cf48c831a4d5948b83814e",
+    "go.mod": "8add92e0eb2e8fdbb1c83246c5773795c0ad8306",
+    "internal/config/config.go": "b853757d555a871bebe17c73475c4312e2e90969",
+    "internal/config/config_mutation_test.go": "29ed5ce5b574f3a17ac1027786ae188e67795413",
+    "internal/config/config_test.go": "bcfcd995edb81d262451f40f4a096ea2272ffde3",
+    "internal/eventbus/bus.go": "20627221f33fe7fd70313df2d34e43735ce3079c",
+    "internal/eventbus/events.go": "b181bfc48c785216481bdb471b28cc13ac21c636",
+    "internal/eventbus/filter.go": "b418d6427e8e2045ac044e01b2f3539d742ee5fe",
+    "internal/logger/logger.go": "e428cad9644a8da6880f52bb1b2103dc7f628ef0",
+    "internal/logger/logger_test.go": "b086cb8001cffe66e7d44147d04eb97f77377f44"
+  },
+  "cases": [
+    {
+      "query": "port override",
+      "path": "internal/config/config.go",
+      "title": "GetPortOverride"
+    },
+    {
+      "query": "choose postgres sqlite database backend",
+      "path": "internal/config/config.go",
+      "title": "GetDBKind"
+    },
+    {
+      "query": "panel version dev build commit",
+      "path": "internal/config/config.go",
+      "title": "GetPanelVersion"
+    },
+    {
+      "query": "node token encryption mode",
+      "path": "internal/config/config.go",
+      "title": "GetNodeTokenEncryptionMode"
+    },
+    {
+      "query": "publish event buffer full",
+      "path": "internal/eventbus/bus.go",
+      "title": "Bus.Publish"
+    },
+    {
+      "query": "subscriber handler panic recovery",
+      "path": "internal/eventbus/bus.go",
+      "title": "safeCall"
+    },
+    {
+      "query": "notification spam flapping events",
+      "path": "internal/eventbus/filter.go",
+      "title": "RateLimiter"
+    },
+    {
+      "query": "remove expired cooldown keys",
+      "path": "internal/eventbus/filter.go",
+      "title": "RateLimiter.pruneLocked"
+    },
+    {
+      "query": "login attempt event payload",
+      "path": "internal/eventbus/events.go",
+      "title": "LoginEventData"
+    },
+    {
+      "query": "file logging rotation size backups",
+      "path": "internal/logger/logger.go",
+      "title": "initFileBackend"
+    },
+    {
+      "query": "retrieve log entries filter level",
+      "path": "internal/logger/logger.go",
+      "title": "GetLogs"
+    },
+    {
+      "query": "frontend docker build Vite",
+      "path": "Dockerfile",
+      "title": "Dockerfile preamble"
+    }
+  ]
+}
