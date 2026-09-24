@@ -1,0 +1,698 @@
+{
+  "version": 1,
+  "baseline_commit": "be16aa81c40fb9dba8af3ac6e358dc6bf92d9694",
+  "tokenizer": "cl100k_base",
+  "tokenizer_package": "tiktoken==0.12.0",
+  "budgets": [
+    1000,
+    2000,
+    4000,
+    8000
+  ],
+  "repositories": [
+    {
+      "name": "click",
+      "url": "https://github.com/pallets/click.git",
+      "commit": "934813e4d421071a1b3db3973c02fe2721359a6e",
+      "split": "dev",
+      "discovery_required": [
+        "src/click/core.py",
+        "tests/test_defaults.py",
+        "docs/commands.rst",
+        ".github/workflows/tests.yaml",
+        "pyproject.toml"
+      ],
+      "source_sha256": {
+        ".github/workflows/tests.yaml": "75b1f6e13afdfe466b0c55524cc80f1d79abfaa38dd0ca7588ff0ca3ba76ca2f",
+        "docs/commands.rst": "676a5df286a93d5a47adb5cd13941a82ad5d1faf879f85a3f632135ea1749bb8",
+        "pyproject.toml": "cd3bba4c0d03adb892ad3020c77ca06f2d270b56ffa558d5a1b8042ad8a82acd",
+        "src/click/core.py": "4359c455d72d670bc83ce96de2f7c7928d136271c2784e3450412e97c5a9cafb",
+        "src/click/termui.py": "74bc624bbd143af21805d6bf9c411968f0053950d5991b35b043ccb8b0e8c10a",
+        "tests/test_defaults.py": "3925b5b5cfb05b7097e91bdf82b125eab264013d5fb58871114df26897e643c4"
+      }
+    },
+    {
+      "name": "express",
+      "url": "https://github.com/expressjs/express.git",
+      "commit": "1faf228935aa0a13111f92c28ee795be64ce3f0f",
+      "split": "dev",
+      "discovery_required": [
+        "lib/response.js",
+        "test/res.json.js",
+        "examples/auth/views/login.ejs",
+        "test/support/env.js",
+        "package.json",
+        ".github/workflows/ci.yml"
+      ],
+      "source_sha256": {
+        ".github/workflows/ci.yml": "edb505629f9ff82b875e73bb2af26891ac3b5b7131ce4ec2c958fd977d8e657c",
+        "examples/auth/views/login.ejs": "e369b6cffc4e585c8f3b08ae88542f5f931f329d505142e90373ea204ef377fa",
+        "lib/request.js": "64ac10752c0516d789cb0698bb433586d4ce3b46f7f06ee3cb2880762b8bda40",
+        "lib/response.js": "4b5c338cb66eb53b07ef900bacf4cd520f057ae53996402286f4334e02806d56",
+        "lib/utils.js": "9035c6d946ece511e749043cc823e32d3efe6727b8a9d52aac89649e99584f09",
+        "package.json": "37ac624cec9a1a3d98596794bac913345ebb0b39c5dbab949fc84e5d9d500470",
+        "test/req.ip.js": "053fbbd6ee2aa3b5b81b3af8b9375797825b952a91d78d29ebb688119d372bbe",
+        "test/res.json.js": "94bf2bf4c7f6028ca7eda8bf51d39cb1969f89b4aa7fc808ce2a98441b1f0e2b",
+        "test/support/env.js": "70c10952a6441e831e652406c31cfa20d4a4f18a0757abce643a1f6a948a8e0b"
+      }
+    },
+    {
+      "name": "cobra",
+      "url": "https://github.com/spf13/cobra.git",
+      "commit": "e94f6d0dd9a5e5738dca6bce03c4b1207ffbc0ec",
+      "split": "heldout",
+      "discovery_required": [
+        "command.go",
+        "args_test.go",
+        "go.mod",
+        "go.sum",
+        ".github/workflows/test.yml",
+        "Makefile"
+      ],
+      "source_sha256": {
+        ".github/workflows/test.yml": "779d189915fb8b1a79f2e31894705076bb525c76c69e29298ba05569d991028f",
+        "Makefile": "9130893c28f3e2381962d089e65ff4054c67d86d577c6b91df97839ffbc5bedc",
+        "args.go": "db24bf6cce3df231100f6b79387e8b4f96b994b438a05d653b0c0a869f605660",
+        "args_test.go": "06899f11ce4ac83866e37398826060cec4e6434a12dcf990ea88ff6ba6f5b29a",
+        "command.go": "fadba96dd9ad4c96e9202b96aad7248b587b4dda705c69da8a5938fdee750aec",
+        "command_test.go": "cf7676a7b2ab5b0353685c2ca322606dcdcc47fe3aebacb4c2ce6e8fa3043e5e",
+        "go.mod": "68bd4de711579c64b38277ed1a8f4c5e97a4b3c8e481604c1f1e21cafbe949a8",
+        "go.sum": "4a47dc8b06264d33a2bee2dbe21e1ca6eae420e0871c7f8030cf8c69c33c40c6",
+        "shell_completions.go": "38244d5514d8de4c7bd1e03890992a9ee73885af53aab4294d8bed2d76f8938d"
+      }
+    },
+    {
+      "name": "jsmn",
+      "url": "https://github.com/zserge/jsmn.git",
+      "commit": "fdcef3ebf886fa210d14956d3c068a653e76a24e",
+      "split": "heldout",
+      "discovery_required": [
+        "jsmn.h",
+        "test/tests.c",
+        "example/simple.c",
+        "Makefile",
+        ".clang-format",
+        "README.md"
+      ],
+      "source_sha256": {
+        ".clang-format": "ab4c62d386e6ce575db6cc2341516188eaa3c13dce381e0bf0186acca202ba25",
+        "Makefile": "30224351e62a0826dc787e7a6ee73b1afd6d48c8297cfc3f11951ba2fd8ba789",
+        "README.md": "ad467ccc96ed9db8020295d0663159fa95d1fc1a42977e267a8805138afcddfd",
+        "example/jsondump.c": "a1a6919948c2ac3008fedd4e7a8868dd44427db34144f4210b87926ad1366f83",
+        "example/simple.c": "c2edd18970e7c1bb900a22fcf49e6f02ec2fa82bcbdc79ae576130174b0689c6",
+        "jsmn.h": "1ed6154dedf009212a08a397e9c4ed50a0ce31d5a8301bb294e137ae3188c13b",
+        "test/tests.c": "189ed2b1f1077f63c8e73bcce28bc2c8625c5db814f6637a7c18fc3ac1a78f7b"
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "click-definition",
+      "repo": "click",
+      "kind": "definition",
+      "query": "resolve_command",
+      "artifacts": [
+        {
+          "path": "src/click/core.py",
+          "ranges": [
+            [
+              1731,
+              1744
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "click-caller",
+      "repo": "click",
+      "kind": "caller",
+      "query": "Where is resolve_command called during invocation?",
+      "artifacts": [
+        {
+          "path": "src/click/core.py",
+          "ranges": [
+            [
+              1691,
+              1697
+            ],
+            [
+              1712,
+              1715
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "click-tests",
+      "repo": "click",
+      "kind": "test",
+      "query": "tests for default_map flags",
+      "artifacts": [
+        {
+          "path": "tests/test_defaults.py",
+          "ranges": [
+            [
+              82,
+              86
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "click-defaults",
+      "repo": "click",
+      "kind": "multi",
+      "query": "How does default_map override defaults and which tests verify it?",
+      "artifacts": [
+        {
+          "path": "src/click/core.py",
+          "ranges": [
+            [
+              675,
+              683
+            ]
+          ]
+        },
+        {
+          "path": "tests/test_defaults.py",
+          "ranges": [
+            [
+              82,
+              86
+            ]
+          ]
+        },
+        {
+          "path": "docs/commands.rst",
+          "ranges": [
+            [
+              432,
+              449
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "click-confirm",
+      "repo": "click",
+      "kind": "behavior",
+      "query": "How does confirm abort on a negative answer?",
+      "artifacts": [
+        {
+          "path": "src/click/termui.py",
+          "ranges": [
+            [
+              235,
+              248
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "click-ci",
+      "repo": "click",
+      "kind": "config",
+      "query": "Which Python versions and operating systems run in the tests workflow?",
+      "artifacts": [
+        {
+          "path": ".github/workflows/tests.yaml",
+          "ranges": [
+            [
+              14,
+              25
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "click-negative-id",
+      "repo": "click",
+      "kind": "negative",
+      "query": "QuantumLedgerReconciler",
+      "artifacts": [],
+      "reason": "Invented identifier; no definition or documented behavior in this snapshot."
+    },
+    {
+      "id": "click-negative-topic",
+      "repo": "click",
+      "kind": "negative",
+      "query": "How are command callbacks replicated through a Raft consensus cluster?",
+      "artifacts": [],
+      "reason": "Command callbacks exist, but no Raft replication implementation is supplied."
+    },
+    {
+      "id": "express-definition",
+      "repo": "express",
+      "kind": "definition",
+      "query": "res.json implementation",
+      "artifacts": [
+        {
+          "path": "lib/response.js",
+          "ranges": [
+            [
+              250,
+              251
+            ],
+            [
+              265,
+              280
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "express-tests",
+      "repo": "express",
+      "kind": "test",
+      "query": "tests json escape HTML characters",
+      "artifacts": [
+        {
+          "path": "test/res.json.js",
+          "ranges": [
+            [
+              112,
+              125
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "express-json",
+      "repo": "express",
+      "kind": "multi",
+      "query": "How is json escape applied and tested?",
+      "artifacts": [
+        {
+          "path": "lib/response.js",
+          "ranges": [
+            [
+              265,
+              271
+            ]
+          ]
+        },
+        {
+          "path": "test/res.json.js",
+          "ranges": [
+            [
+              112,
+              125
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "express-proxy",
+      "repo": "express",
+      "kind": "multi",
+      "query": "How does trust proxy hop count affect req.ip?",
+      "artifacts": [
+        {
+          "path": "lib/utils.js",
+          "ranges": [
+            [
+              215,
+              234
+            ]
+          ]
+        },
+        {
+          "path": "lib/request.js",
+          "ranges": [
+            [
+              349,
+              352
+            ]
+          ]
+        },
+        {
+          "path": "test/req.ip.js",
+          "ranges": [
+            [
+              24,
+              37
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "express-template",
+      "repo": "express",
+      "kind": "template",
+      "query": "Where is the login form username password markup?",
+      "artifacts": [
+        {
+          "path": "examples/auth/views/login.ejs",
+          "ranges": [
+            [
+              7,
+              14
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "express-config",
+      "repo": "express",
+      "kind": "config",
+      "query": "Which mocha command requires the test support environment?",
+      "artifacts": [
+        {
+          "path": "package.json",
+          "ranges": [
+            [
+              97,
+              100
+            ]
+          ]
+        },
+        {
+          "path": "test/support/env.js",
+          "ranges": [
+            [
+              2,
+              3
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "express-negative-id",
+      "repo": "express",
+      "kind": "negative",
+      "query": "QuantumLedgerReconciler",
+      "artifacts": [],
+      "reason": "Invented identifier absent from this snapshot."
+    },
+    {
+      "id": "express-negative-topic",
+      "repo": "express",
+      "kind": "negative",
+      "query": "How does the router persist routes in a PostgreSQL transaction?",
+      "artifacts": [],
+      "reason": "Routing exists; database transaction persistence of routes is not implemented here."
+    },
+    {
+      "id": "cobra-definition",
+      "repo": "cobra",
+      "kind": "definition",
+      "query": "ExecuteC definition",
+      "artifacts": [
+        {
+          "path": "command.go",
+          "ranges": [
+            [
+              1054,
+              1064
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cobra-caller",
+      "repo": "cobra",
+      "kind": "caller",
+      "query": "Who calls ValidateRequiredFlags before running a command?",
+      "artifacts": [
+        {
+          "path": "command.go",
+          "ranges": [
+            [
+              977,
+              983
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cobra-tests",
+      "repo": "cobra",
+      "kind": "test",
+      "query": "tests required flags missing error",
+      "artifacts": [
+        {
+          "path": "command_test.go",
+          "ranges": [
+            [
+              849,
+              865
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cobra-required",
+      "repo": "cobra",
+      "kind": "multi",
+      "query": "How are required flags marked validated and tested?",
+      "artifacts": [
+        {
+          "path": "shell_completions.go",
+          "ranges": [
+            [
+              38,
+              40
+            ]
+          ]
+        },
+        {
+          "path": "command.go",
+          "ranges": [
+            [
+              1156,
+              1169
+            ]
+          ]
+        },
+        {
+          "path": "command_test.go",
+          "ranges": [
+            [
+              849,
+              865
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cobra-args",
+      "repo": "cobra",
+      "kind": "multi",
+      "query": "ExactArgs invalid count implementation and tests",
+      "artifacts": [
+        {
+          "path": "args.go",
+          "ranges": [
+            [
+              95,
+              102
+            ]
+          ]
+        },
+        {
+          "path": "args_test.go",
+          "ranges": [
+            [
+              308,
+              312
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cobra-ci",
+      "repo": "cobra",
+      "kind": "config",
+      "query": "What Go versions and platforms are in the test matrix?",
+      "artifacts": [
+        {
+          "path": ".github/workflows/test.yml",
+          "ranges": [
+            [
+              60,
+              71
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cobra-negative-id",
+      "repo": "cobra",
+      "kind": "negative",
+      "query": "QuantumLedgerReconciler",
+      "artifacts": [],
+      "reason": "Invented identifier absent from this snapshot."
+    },
+    {
+      "id": "cobra-negative-topic",
+      "repo": "cobra",
+      "kind": "negative",
+      "query": "How are flag values encrypted with an AWS KMS key?",
+      "artifacts": [],
+      "reason": "Flag handling exists; KMS encryption implementation is not supplied."
+    },
+    {
+      "id": "jsmn-definition",
+      "repo": "jsmn",
+      "kind": "definition",
+      "query": "jsmn_init implementation",
+      "artifacts": [
+        {
+          "path": "jsmn.h",
+          "ranges": [
+            [
+              456,
+              460
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "jsmn-caller",
+      "repo": "jsmn",
+      "kind": "caller",
+      "query": "example calling jsmn_parse and checking errors",
+      "artifacts": [
+        {
+          "path": "example/simple.c",
+          "ranges": [
+            [
+              28,
+              34
+            ]
+          ]
+        },
+        {
+          "path": "example/jsondump.c",
+          "ranges": [
+            [
+              117,
+              125
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "jsmn-tests",
+      "repo": "jsmn",
+      "kind": "test",
+      "query": "tests partial string parsing",
+      "artifacts": [
+        {
+          "path": "test/tests.c",
+          "ranges": [
+            [
+              99,
+              118
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "jsmn-nomem",
+      "repo": "jsmn",
+      "kind": "multi",
+      "query": "How can parsing resume after JSMN_ERROR_NOMEM and what tests verify it?",
+      "artifacts": [
+        {
+          "path": "test/tests.c",
+          "ranges": [
+            [
+              154,
+              168
+            ]
+          ]
+        },
+        {
+          "path": "README.md",
+          "ranges": [
+            [
+              170,
+              173
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "jsmn-config",
+      "repo": "jsmn",
+      "kind": "config",
+      "query": "Which tests enable JSMN_STRICT and JSMN_PARENT_LINKS?",
+      "artifacts": [
+        {
+          "path": "Makefile",
+          "ranges": [
+            [
+              4,
+              16
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "jsmn-header",
+      "repo": "jsmn",
+      "kind": "multi",
+      "query": "How do I include jsmn from multiple C files without duplicate symbols?",
+      "artifacts": [
+        {
+          "path": "README.md",
+          "ranges": [
+            [
+              95,
+              107
+            ]
+          ]
+        },
+        {
+          "path": "jsmn.h",
+          "ranges": [
+            [
+              102,
+              106
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "jsmn-negative-id",
+      "repo": "jsmn",
+      "kind": "negative",
+      "query": "QuantumLedgerReconciler",
+      "artifacts": [],
+      "reason": "Invented identifier absent from this snapshot."
+    },
+    {
+      "id": "jsmn-negative-topic",
+      "repo": "jsmn",
+      "kind": "negative",
+      "query": "Where does the JSON parser validate a JSON Schema draft and resolve remote references?",
+      "artifacts": [],
+      "reason": "JSON tokenization exists; JSON Schema validation and network resolution do not."
+    }
+  ]
+}

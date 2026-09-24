@@ -1,0 +1,3035 @@
+{
+  "manifest_sha256": "14dda961799749f02d619c92c0569c33fbade1163e480d247f981ae974d0fd64",
+  "baseline_commit": "be16aa81c40fb9dba8af3ac6e358dc6bf92d9694",
+  "tokenizer": "cl100k_base",
+  "tiktoken": "0.12.0",
+  "python": "3.12.1",
+  "platform": "Windows",
+  "sqlite": "3.43.1",
+  "implementation_sha256": "c9747175eed631ed0874d0346edf51eae01dc2e43f7ef497d29ff290d62bc16c",
+  "runs": [
+    {
+      "repo": "cobra",
+      "split": "heldout",
+      "variant": "before",
+      "scope": "native",
+      "commit": "e94f6d0dd9a5e5738dca6bce03c4b1207ffbc0ec",
+      "tracked_files": 66,
+      "inventory_sha256": "fae6543a99ff64d771a6de26b56c75f1fcd63c436c082b2d26a05843bde927cb",
+      "indexed_files": 61,
+      "indexed_paths_sha256": "1e6038d21e5da0092e8cc43f875ae45f9c3772c481c7f9a7454e9f1fa2693811",
+      "discovery_required": 6,
+      "discovery_omissions": [
+        "go.sum"
+      ],
+      "skipped": {
+        "excluded": 1,
+        "unsupported-type": 4
+      },
+      "build_seconds": 0.354,
+      "summary": {
+        "positive_cases": 6,
+        "negative_cases": 2,
+        "hit1": 0.3333333333333333,
+        "mrr5": 0.5,
+        "ndcg5": 0.5302633827151838,
+        "artifact_recall5": 0.6666666666666666,
+        "negative_has_hits_rate": 0.5,
+        "coverage": {
+          "native": {
+            "1000": 0.06944444444444445,
+            "2000": 0.2638888888888889,
+            "4000": 0.6666666666666666,
+            "8000": 0.8333333333333334
+          },
+          "canonical": {
+            "1000": 0.16666666666666666,
+            "2000": 0.2638888888888889,
+            "4000": 0.6666666666666666,
+            "8000": 0.8333333333333334
+          }
+        }
+      },
+      "cases": [
+        {
+          "id": "cobra-definition",
+          "kind": "definition",
+          "query": "ExecuteC definition",
+          "hit1": 0,
+          "mrr5": 0.5,
+          "ndcg5": 0.6309297535714575,
+          "artifact_recall5": 1.0,
+          "first_relevant_rank": 2,
+          "top5": [
+            {
+              "path": "command.go",
+              "start": 1117,
+              "end": 1140,
+              "title": "Command.ExecuteC"
+            },
+            {
+              "path": "command.go",
+              "start": 1053,
+              "end": 1116,
+              "title": "Command.ExecuteC"
+            },
+            {
+              "path": "command_test.go",
+              "start": 48,
+              "end": 58,
+              "title": "executeCommandC"
+            },
+            {
+              "path": "command_test.go",
+              "start": 159,
+              "end": 176,
+              "title": "TestSubcommandExecuteC"
+            },
+            {
+              "path": "LICENSE.txt",
+              "start": 1,
+              "end": 64,
+              "title": "LICENSE.txt preamble"
+            }
+          ],
+          "negative_has_hits": null,
+          "assessment": null,
+          "curves": {
+            "native": {
+              "1000": {
+                "tokens": 504,
+                "evidence_coverage": 0.0,
+                "artifact_coverage": 0.0,
+                "evidence_precision": null
+              },
+              "2000": {
+                "tokens": 1295,
+                "evidence_coverage": 0.0,
+                "artifact_coverage": 0.0,
+                "evidence_precision": 0.0
+              },
+              "4000": {
+                "tokens": 3899,
+                "evidence_coverage": 1.0,
+                "artifact_coverage": 1.0,
+                "evidence_precision": 0.06428571428571428
+              },
+              "8000": {
+                "tokens": 6210,
+                "evidence_coverage": 1.0,
+                "artifact_coverage": 1.0,
+                "evidence_precision": 0.04054054054054054
+              }
+            },
+            "canonical": {
+              "1000": {
+                "tokens": 875,
+                "evidence_coverage": 0.0,
+                "artifact_coverage": 0.0,
+                "evidence_precision": 0.0
+              },
+              "2000": {
+                "tokens": 1708,
+                "evidence_coverage": 0.0,
+                "artifact_coverage": 0.0,
+                "evidence_precision": 0.0
+              },
+              "4000": {
+                "tokens": 3898,
+                "evidence_coverage": 1.0,
+                "artifact_coverage": 1.0,
+                "evidence_precision": 0.05806451612903226
+              },
+              "8000": {
+                "tokens": 5213,
+                "evidence_coverage": 1.0,
+                "artifact_coverage": 1.0,
+                "evidence_precision": 0.04054054054054054
+              }
+            }
+          },
+          "cost_at_coverage": {
+            "native": {
+              "0.5": 3899,
+              "0.8": 3899,
+              "1.0": 3899
+            },
+            "canonical": {
+              "0.5": 3324,
+              "0.8": 3324,
+              "1.0": 3324
+            }
+          },
+          "collect": [],
+          "trace": [
+            {
+              "command": "query",
+              "native_tokens": 504,
+              "canonical_tokens": 191,
+              "utf8_bytes": 1460,
+              "byte_proxy_units": 365,
+              "results": 6,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 513,
+              "canonical_tokens": 457,
+              "utf8_bytes": 1510,
+              "byte_proxy_units": 378,
+              "results": 24,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 278,
+              "canonical_tokens": 227,
+              "utf8_bytes": 809,
+              "byte_proxy_units": 203,
+              "results": 11,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 885,
+              "canonical_tokens": 833,
+              "utf8_bytes": 3586,
+              "byte_proxy_units": 897,
+              "results": 45,
+              "next_offset": 45
+            },
+            {
+              "command": "show",
+              "native_tokens": 584,
+              "canonical_tokens": 536,
+              "utf8_bytes": 2229,
+              "byte_proxy_units": 558,
+              "results": 33,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 1135,
+              "canonical_tokens": 1080,
+              "utf8_bytes": 3495,
+              "byte_proxy_units": 874,
+              "results": 64,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 421,
+              "canonical_tokens": 364,
+              "utf8_bytes": 1252,
+              "byte_proxy_units": 313,
+              "results": 18,
+              "next_offset": null
+            },
+            {
+              "command": "neighbors",
+              "native_tokens": 476,
+              "canonical_tokens": 210,
+              "utf8_bytes": 1603,
+              "byte_proxy_units": 401,
+              "results": 8,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 1065,
+              "canonical_tokens": 1014,
+              "utf8_bytes": 3354,
+              "byte_proxy_units": 839,
+              "results": 64,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 349,
+              "canonical_tokens": 301,
+              "utf8_bytes": 1111,
+              "byte_proxy_units": 278,
+              "results": 19,
+              "next_offset": null
+            }
+          ]
+        },
+        {
+          "id": "cobra-caller",
+          "kind": "caller",
+          "query": "Who calls ValidateRequiredFlags before running a command?",
+          "hit1": 0,
+          "mrr5": 0.5,
+          "ndcg5": 0.6309297535714575,
+          "artifact_recall5": 1.0,
+          "first_relevant_rank": 2,
+          "top5": [
+            {
+              "path": "command.go",
+              "start": 1148,
+              "end": 1171,
+              "title": "Command.ValidateRequiredFlags"
+            },
+            {
+              "path": "command.go",
+              "start": 940,
+              "end": 1003,
+              "title": "Command.execute"
+            },
+            {
+              "path": "command_test.go",
+              "start": 612,
+              "end": 638,
+              "title": "TestFlagBeforeCommand"
+            },
+            {
+              "path": "CONDUCT.md",
+              "start": 18,
+              "end": 31,
+              "title": "Breaking Changes"
+            },
+            {
+              "path": "flag_groups_test.go",
+              "start": 22,
+              "end": 85,
+              "title": "TestValidateFlagGroups"
+            }
+          ],
+          "negative_has_hits": null,
+          "assessment": null,
+          "curves": {
+            "native": {
+              "1000": {
+                "tokens": 562,
+                "evidence_coverage": 0.0,
+                "artifact_coverage": 0.0,
+                "evidence_precision": null
+              },
+              "2000": {
+                "tokens": 1656,
+                "evidence_coverage": 0.0,
+                "artifact_coverage": 0.0,
+                "evidence_precision": 0.0
+              },
+              "4000": {
+                "tokens": 3237,
+                "evidence_coverage": 0.0,
+                "artifact_coverage": 0.0,
+                "evidence_precision": 0.0
+              },
+              "8000": {
+                "tokens": 6690,
+                "evidence_coverage": 1.0,
+                "artifact_coverage": 1.0,
+                "evidence_precision": 0.024096385542168676
+              }
+            },
+            "canonical": {
+              "1000": {
+                "tokens": 704,
+                "evidence_coverage": 0.0,
+                "artifact_coverage": 0.0,
+                "evidence_precision": 0.0
+              },
+              "2000": {
+                "tokens": 1610,
+                "evidence_coverage": 0.0,
+                "artifact_coverage": 0.0,
+                "evidence_precision": 0.0
+              },
+              "4000": {
+                "tokens": 3676,
+                "evidence_coverage": 0.0,
+                "artifact_coverage": 0.0,
+                "evidence_precision": 0.0
+              },
+              "8000": {
+                "tokens": 5761,
+                "evidence_coverage": 1.0,
+                "artifact_coverage": 1.0,
+                "evidence_precision": 0.024096385542168676
+              }
+            }
+          },
+          "cost_at_coverage": {
+            "native": {
+              "0.5": 5437,
+              "0.8": 5437,
+              "1.0": 5437
+            },
+            "canonical": {
+              "0.5": 4795,
+              "0.8": 4795,
+              "1.0": 4795
+            }
+          },
+          "collect": [],
+          "trace": [
+            {
+              "command": "query",
+              "native_tokens": 562,
+              "canonical_tokens": 239,
+              "utf8_bytes": 1773,
+              "byte_proxy_units": 444,
+              "results": 6,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 520,
+              "canonical_tokens": 465,
+              "utf8_bytes": 1593,
+              "byte_proxy_units": 399,
+              "results": 24,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 574,
+              "canonical_tokens": 521,
+              "utf8_bytes": 1682,
+              "byte_proxy_units": 421,
+              "results": 27,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 437,
+              "canonical_tokens": 385,
+              "utf8_bytes": 1712,
+              "byte_proxy_units": 428,
+              "results": 14,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 1144,
+              "canonical_tokens": 1091,
+              "utf8_bytes": 3536,
+              "byte_proxy_units": 884,
+              "results": 54,
+              "next_offset": 54
+            },
+            {
+              "command": "show",
+              "native_tokens": 1031,
+              "canonical_tokens": 975,
+              "utf8_bytes": 3512,
+              "byte_proxy_units": 878,
+              "results": 52,
+              "next_offset": 52
+            },
+            {
+              "command": "show",
+              "native_tokens": 1169,
+              "canonical_tokens": 1119,
+              "utf8_bytes": 3420,
+              "byte_proxy_units": 855,
+              "results": 64,
+              "next_offset": null
+            },
+            {
+              "command": "neighbors",
+              "native_tokens": 322,
+              "canonical_tokens": 140,
+              "utf8_bytes": 1053,
+              "byte_proxy_units": 264,
+              "results": 5,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 662,
+              "canonical_tokens": 609,
+              "utf8_bytes": 2145,
+              "byte_proxy_units": 537,
+              "results": 31,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 269,
+              "canonical_tokens": 217,
+              "utf8_bytes": 770,
+              "byte_proxy_units": 193,
+              "results": 10,
+              "next_offset": null
+            }
+          ]
+        },
+        {
+          "id": "cobra-tests",
+          "kind": "test",
+          "query": "tests required flags missing error",
+          "hit1": 0,
+          "mrr5": 0,
+          "ndcg5": 0.0,
+          "artifact_recall5": 0.0,
+          "first_relevant_rank": null,
+          "top5": [
+            {
+              "path": "command.go",
+              "start": 1148,
+              "end": 1171,
+              "title": "Command.ValidateRequiredFlags"
+            },
+            {
+              "path": "flag_groups.go",
+              "start": 144,
+              "end": 166,
+              "title": "validateRequiredFlagGroups"
+            },
+            {
+              "path": "flag_groups_test.go",
+              "start": 22,
+              "end": 85,
+              "title": "TestValidateFlagGroups"
+            },
+            {
+              "path": "flag_groups_test.go",
+              "start": 86,
+              "end": 149,
+              "title": "TestValidateFlagGroups"
+            },
+            {
+              "path": "command.go",
+              "start": 1858,
+              "end": 1865,
+              "title": "Command.mergePersistentFlags"
+            }
+          ],
+          "negative_has_hits": null,
+          "assessment": null,
+          "curves": {
+            "native": {
+              "1000": {
+                "tokens": 552,
+                "evidence_coverage": 0.0,
+                "artifact_coverage": 0.0,
+                "evidence_precision": null
+              },
+              "2000": {
+                "tokens": 1561,
+                "evidence_coverage": 0.0,
+                "artifact_coverage": 0.0,
+                "evidence_precision": 0.0
+              },
+              "4000": {
+                "tokens": 3131,
+                "evidence_coverage": 1.0,
+                "artifact_coverage": 1.0,
+                "evidence_precision": 0.1308411214953271
+              },
+              "8000": {
+                "tokens": 6640,
+                "evidence_coverage": 1.0,
+                "artifact_coverage": 1.0,
+                "evidence_precision": 0.058333333333333334
+              }
+            },
+            "canonical": {
+              "1000": {
+                "tokens": 701,
+                "evidence_coverage": 0.0,
+                "artifact_coverage": 0.0,
+                "evidence_precision": 0.0
+              },
+              "2000": {
+                "tokens": 1138,
+                "evidence_coverage": 0.0,
+                "artifact_coverage": 0.0,
+                "evidence_precision": 0.0
+              },
+              "4000": {
+                "tokens": 3993,
+                "evidence_coverage": 1.0,
+                "artifact_coverage": 1.0,
+                "evidence_precision": 0.09333333333333334
+              },
+              "8000": {
+                "tokens": 5721,
+                "evidence_coverage": 1.0,
+                "artifact_coverage": 1.0,
+                "evidence_precision": 0.058333333333333334
+              }
+            }
+          },
+          "cost_at_coverage": {
+            "native": {
+              "0.5": 3131,
+              "0.8": 3131,
+              "1.0": 3131
+            },
+            "canonical": {
+              "0.5": 2603,
+              "0.8": 2603,
+              "1.0": 2603
+            }
+          },
+          "collect": [],
+          "trace": [
+            {
+              "command": "query",
+              "native_tokens": 552,
+              "canonical_tokens": 236,
+              "utf8_bytes": 1724,
+              "byte_proxy_units": 431,
+              "results": 6,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 520,
+              "canonical_tokens": 465,
+              "utf8_bytes": 1593,
+              "byte_proxy_units": 399,
+              "results": 24,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 489,
+              "canonical_tokens": 437,
+              "utf8_bytes": 1500,
+              "byte_proxy_units": 375,
+              "results": 23,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 1144,
+              "canonical_tokens": 1091,
+              "utf8_bytes": 3536,
+              "byte_proxy_units": 884,
+              "results": 54,
+              "next_offset": 54
+            },
+            {
+              "command": "show",
+              "native_tokens": 426,
+              "canonical_tokens": 374,
+              "utf8_bytes": 1263,
+              "byte_proxy_units": 316,
+              "results": 18,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 1103,
+              "canonical_tokens": 1050,
+              "utf8_bytes": 3544,
+              "byte_proxy_units": 886,
+              "results": 36,
+              "next_offset": 36
+            },
+            {
+              "command": "show",
+              "native_tokens": 253,
+              "canonical_tokens": 200,
+              "utf8_bytes": 806,
+              "byte_proxy_units": 202,
+              "results": 8,
+              "next_offset": null
+            },
+            {
+              "command": "neighbors",
+              "native_tokens": 322,
+              "canonical_tokens": 140,
+              "utf8_bytes": 1053,
+              "byte_proxy_units": 264,
+              "results": 5,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 1169,
+              "canonical_tokens": 1119,
+              "utf8_bytes": 3420,
+              "byte_proxy_units": 855,
+              "results": 64,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 662,
+              "canonical_tokens": 609,
+              "utf8_bytes": 2145,
+              "byte_proxy_units": 537,
+              "results": 31,
+              "next_offset": null
+            }
+          ]
+        },
+        {
+          "id": "cobra-required",
+          "kind": "multi",
+          "query": "How are required flags marked validated and tested?",
+          "hit1": 0,
+          "mrr5": 0,
+          "ndcg5": 0.0,
+          "artifact_recall5": 0.0,
+          "first_relevant_rank": null,
+          "top5": [
+            {
+              "path": "flag_groups_test.go",
+              "start": 150,
+              "end": 195,
+              "title": "TestValidateFlagGroups"
+            },
+            {
+              "path": "flag_groups.go",
+              "start": 220,
+              "end": 283,
+              "title": "Command.enforceFlagGroupsForCompletion"
+            },
+            {
+              "path": "site/content/completions/_index.md",
+              "start": 274,
+              "end": 289,
+              "title": "Mark flags as required"
+            },
+            {
+              "path": "shell_completions.go",
+              "start": 21,
+              "end": 27,
+              "title": "Command.MarkFlagRequired"
+            },
+            {
+              "path": "shell_completions.go",
+              "start": 28,
+              "end": 34,
+              "title": "Command.MarkPersistentFlagRequired"
+            }
+          ],
+          "negative_has_hits": null,
+          "assessment": null,
+          "curves": {
+            "native": {
+              "1000": {
+                "tokens": 532,
+                "evidence_coverage": 0.0,
+                "artifact_coverage": 0.0,
+                "evidence_precision": null
+              },
+              "2000": {
+                "tokens": 1609,
+                "evidence_coverage": 0.0,
+                "artifact_coverage": 0.0,
+                "evidence_precision": 0.0
+              },
+              "4000": {
+                "tokens": 3905,
+                "evidence_coverage": 0.0,
+                "artifact_coverage": 0.0,
+                "evidence_precision": 0.0
+              },
+              "8000": {
+                "tokens": 6036,
+                "evidence_coverage": 0.0,
+                "artifact_coverage": 0.0,
+                "evidence_precision": 0.0
+              }
+            },
+            "canonical": {
+              "1000": {
+                "tokens": 214,
+                "evidence_coverage": 0.0,
+                "artifact_coverage": 0.0,
+                "evidence_precision": null
+              },
+              "2000": {
+                "tokens": 1238,
+                "evidence_coverage": 0.0,
+                "artifact_coverage": 0.0,
+                "evidence_precision": 0.0
+              },
+              "4000": {
+                "tokens": 3883,
+                "evidence_coverage": 0.0,
+                "artifact_coverage": 0.0,
+                "evidence_precision": 0.0
+              },
+              "8000": {
+                "tokens": 4943,
+                "evidence_coverage": 0.0,
+                "artifact_coverage": 0.0,
+                "evidence_precision": 0.0
+              }
+            }
+          },
+          "cost_at_coverage": {
+            "native": {
+              "0.5": null,
+              "0.8": null,
+              "1.0": null
+            },
+            "canonical": {
+              "0.5": null,
+              "0.8": null,
+              "1.0": null
+            }
+          },
+          "collect": [],
+          "trace": [
+            {
+              "command": "query",
+              "native_tokens": 532,
+              "canonical_tokens": 214,
+              "utf8_bytes": 1711,
+              "byte_proxy_units": 428,
+              "results": 6,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 1077,
+              "canonical_tokens": 1024,
+              "utf8_bytes": 3391,
+              "byte_proxy_units": 848,
+              "results": 46,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 1028,
+              "canonical_tokens": 975,
+              "utf8_bytes": 3571,
+              "byte_proxy_units": 893,
+              "results": 49,
+              "next_offset": 49
+            },
+            {
+              "command": "show-page",
+              "native_tokens": 428,
+              "canonical_tokens": 375,
+              "utf8_bytes": 1402,
+              "byte_proxy_units": 351,
+              "results": 15,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 354,
+              "canonical_tokens": 301,
+              "utf8_bytes": 1162,
+              "byte_proxy_units": 291,
+              "results": 16,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 241,
+              "canonical_tokens": 188,
+              "utf8_bytes": 810,
+              "byte_proxy_units": 203,
+              "results": 7,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 245,
+              "canonical_tokens": 192,
+              "utf8_bytes": 861,
+              "byte_proxy_units": 216,
+              "results": 7,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 424,
+              "canonical_tokens": 372,
+              "utf8_bytes": 1375,
+              "byte_proxy_units": 344,
+              "results": 16,
+              "next_offset": null
+            },
+            {
+              "command": "neighbors",
+              "native_tokens": 545,
+              "canonical_tokens": 242,
+              "utf8_bytes": 1876,
+              "byte_proxy_units": 469,
+              "results": 9,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 945,
+              "canonical_tokens": 895,
+              "utf8_bytes": 3567,
+              "byte_proxy_units": 892,
+              "results": 50,
+              "next_offset": 50
+            },
+            {
+              "command": "show",
+              "native_tokens": 217,
+              "canonical_tokens": 165,
+              "utf8_bytes": 669,
+              "byte_proxy_units": 168,
+              "results": 6,
+              "next_offset": null
+            }
+          ]
+        },
+        {
+          "id": "cobra-args",
+          "kind": "multi",
+          "query": "ExactArgs invalid count implementation and tests",
+          "hit1": 1,
+          "mrr5": 1.0,
+          "ndcg5": 0.9197207891481876,
+          "artifact_recall5": 1.0,
+          "first_relevant_rank": 1,
+          "top5": [
+            {
+              "path": "args_test.go",
+              "start": 308,
+              "end": 313,
+              "title": "TestExactArgs_WithInvalidCount"
+            },
+            {
+              "path": "args_test.go",
+              "start": 320,
+              "end": 325,
+              "title": "TestExactArgs_WithInvalidCount_WithValid_WithInvalidArgs"
+            },
+            {
+              "path": "args.go",
+              "start": 93,
+              "end": 102,
+              "title": "ExactArgs"
+            },
+            {
+              "path": "args.go",
+              "start": 125,
+              "end": 131,
+              "title": "ExactValidArgs"
+            },
+            {
+              "path": "site/content/user_guide.md",
+              "start": 373,
+              "end": 427,
+              "title": "Positional and Custom Arguments"
+            }
+          ],
+          "negative_has_hits": null,
+          "assessment": null,
+          "curves": {
+            "native": {
+              "1000": {
+                "tokens": 785,
+                "evidence_coverage": 0.4166666666666667,
+                "artifact_coverage": 0.5,
+                "evidence_precision": 1.0
+              },
+              "2000": {
+                "tokens": 1064,
+                "evidence_coverage": 1.0,
+                "artifact_coverage": 1.0,
+                "evidence_precision": 0.8571428571428571
+              },
+              "4000": {
+                "tokens": 3796,
+                "evidence_coverage": 1.0,
+                "artifact_coverage": 1.0,
+                "evidence_precision": 0.11650485436893204
+              },
+              "8000": {
+                "tokens": 4084,
+                "evidence_coverage": 1.0,
+                "artifact_coverage": 1.0,
+                "evidence_precision": 0.10619469026548672
+              }
+            },
+            "canonical": {
+              "1000": {
+                "tokens": 634,
+                "evidence_coverage": 1.0,
+                "artifact_coverage": 1.0,
+                "evidence_precision": 0.8571428571428571
+              },
+              "2000": {
+                "tokens": 1583,
+                "evidence_coverage": 1.0,
+                "artifact_coverage": 1.0,
+                "evidence_precision": 0.21052631578947367
+              },
+              "4000": {
+                "tokens": 3149,
+                "evidence_coverage": 1.0,
+                "artifact_coverage": 1.0,
+                "evidence_precision": 0.10619469026548672
+              },
+              "8000": {
+                "tokens": 3149,
+                "evidence_coverage": 1.0,
+                "artifact_coverage": 1.0,
+                "evidence_precision": 0.10619469026548672
+              }
+            }
+          },
+          "cost_at_coverage": {
+            "native": {
+              "0.5": 1064,
+              "0.8": 1064,
+              "1.0": 1064
+            },
+            "canonical": {
+              "0.5": 634,
+              "0.8": 634,
+              "1.0": 634
+            }
+          },
+          "collect": [],
+          "trace": [
+            {
+              "command": "query",
+              "native_tokens": 559,
+              "canonical_tokens": 233,
+              "utf8_bytes": 1713,
+              "byte_proxy_units": 429,
+              "results": 6,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 226,
+              "canonical_tokens": 172,
+              "utf8_bytes": 664,
+              "byte_proxy_units": 166,
+              "results": 6,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 279,
+              "canonical_tokens": 229,
+              "utf8_bytes": 816,
+              "byte_proxy_units": 204,
+              "results": 10,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 1008,
+              "canonical_tokens": 949,
+              "utf8_bytes": 3584,
+              "byte_proxy_units": 896,
+              "results": 50,
+              "next_offset": 50
+            },
+            {
+              "command": "show",
+              "native_tokens": 624,
+              "canonical_tokens": 566,
+              "utf8_bytes": 1944,
+              "byte_proxy_units": 486,
+              "results": 27,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 242,
+              "canonical_tokens": 179,
+              "utf8_bytes": 721,
+              "byte_proxy_units": 181,
+              "results": 6,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 251,
+              "canonical_tokens": 202,
+              "utf8_bytes": 810,
+              "byte_proxy_units": 203,
+              "results": 7,
+              "next_offset": null
+            },
+            {
+              "command": "neighbors",
+              "native_tokens": 316,
+              "canonical_tokens": 145,
+              "utf8_bytes": 1054,
+              "byte_proxy_units": 264,
+              "results": 5,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 291,
+              "canonical_tokens": 239,
+              "utf8_bytes": 810,
+              "byte_proxy_units": 203,
+              "results": 12,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 288,
+              "canonical_tokens": 235,
+              "utf8_bytes": 841,
+              "byte_proxy_units": 211,
+              "results": 11,
+              "next_offset": null
+            }
+          ]
+        },
+        {
+          "id": "cobra-ci",
+          "kind": "config",
+          "query": "What Go versions and platforms are in the test matrix?",
+          "hit1": 1,
+          "mrr5": 1.0,
+          "ndcg5": 1.0,
+          "artifact_recall5": 1.0,
+          "first_relevant_rank": 1,
+          "top5": [
+            {
+              "path": ".github/workflows/test.yml",
+              "start": 65,
+              "end": 123,
+              "title": "test.yml preamble"
+            },
+            {
+              "path": ".github/workflows/test.yml",
+              "start": 1,
+              "end": 64,
+              "title": "test.yml preamble"
+            },
+            {
+              "path": "command_test.go",
+              "start": 1244,
+              "end": 1253,
+              "title": "TestVersionFlagOnlyExistsIfVersionNonEmpty"
+            },
+            {
+              "path": "command_test.go",
+              "start": 1276,
+              "end": 1286,
+              "title": "TestShorthandVersionFlagOnlyAddedIfVersionNotDefined"
+            },
+            {
+              "path": "completions_test.go",
+              "start": 3134,
+              "end": 3197,
+              "title": "TestCompletionCobraFlags"
+            }
+          ],
+          "negative_has_hits": null,
+          "assessment": null,
+          "curves": {
+            "native": {
+              "1000": {
+                "tokens": 570,
+                "evidence_coverage": 0.0,
+                "artifact_coverage": 0.0,
+                "evidence_precision": null
+              },
+              "2000": {
+                "tokens": 1797,
+                "evidence_coverage": 0.5833333333333334,
+                "artifact_coverage": 0.0,
+                "evidence_precision": 0.12727272727272726
+              },
+              "4000": {
+                "tokens": 3888,
+                "evidence_coverage": 1.0,
+                "artifact_coverage": 1.0,
+                "evidence_precision": 0.07692307692307693
+              },
+              "8000": {
+                "tokens": 6735,
+                "evidence_coverage": 1.0,
+                "artifact_coverage": 1.0,
+                "evidence_precision": 0.046153846153846156
+              }
+            },
+            "canonical": {
+              "1000": {
+                "tokens": 228,
+                "evidence_coverage": 0.0,
+                "artifact_coverage": 0.0,
+                "evidence_precision": null
+              },
+              "2000": {
+                "tokens": 1344,
+                "evidence_coverage": 0.5833333333333334,
+                "artifact_coverage": 0.0,
+                "evidence_precision": 0.12727272727272726
+              },
+              "4000": {
+                "tokens": 3617,
+                "evidence_coverage": 1.0,
+                "artifact_coverage": 1.0,
+                "evidence_precision": 0.07272727272727272
+              },
+              "8000": {
+                "tokens": 5851,
+                "evidence_coverage": 1.0,
+                "artifact_coverage": 1.0,
+                "evidence_precision": 0.046153846153846156
+              }
+            }
+          },
+          "cost_at_coverage": {
+            "native": {
+              "0.5": 1494,
+              "0.8": 3888,
+              "1.0": 3888
+            },
+            "canonical": {
+              "0.5": 1102,
+              "0.8": 3330,
+              "1.0": 3330
+            }
+          },
+          "collect": [],
+          "trace": [
+            {
+              "command": "query",
+              "native_tokens": 570,
+              "canonical_tokens": 228,
+              "utf8_bytes": 1674,
+              "byte_proxy_units": 419,
+              "results": 6,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 924,
+              "canonical_tokens": 874,
+              "utf8_bytes": 2986,
+              "byte_proxy_units": 747,
+              "results": 59,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 303,
+              "canonical_tokens": 242,
+              "utf8_bytes": 891,
+              "byte_proxy_units": 223,
+              "results": 10,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 1238,
+              "canonical_tokens": 1182,
+              "utf8_bytes": 3534,
+              "byte_proxy_units": 884,
+              "results": 55,
+              "next_offset": 55
+            },
+            {
+              "command": "show",
+              "native_tokens": 853,
+              "canonical_tokens": 804,
+              "utf8_bytes": 2786,
+              "byte_proxy_units": 697,
+              "results": 64,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 350,
+              "canonical_tokens": 287,
+              "utf8_bytes": 1038,
+              "byte_proxy_units": 260,
+              "results": 11,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 1236,
+              "canonical_tokens": 1179,
+              "utf8_bytes": 3573,
+              "byte_proxy_units": 894,
+              "results": 57,
+              "next_offset": 57
+            },
+            {
+              "command": "neighbors",
+              "native_tokens": 176,
+              "canonical_tokens": 76,
+              "utf8_bytes": 577,
+              "byte_proxy_units": 145,
+              "results": 2,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 741,
+              "canonical_tokens": 687,
+              "utf8_bytes": 2182,
+              "byte_proxy_units": 546,
+              "results": 35,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 344,
+              "canonical_tokens": 292,
+              "utf8_bytes": 1152,
+              "byte_proxy_units": 288,
+              "results": 19,
+              "next_offset": null
+            }
+          ]
+        },
+        {
+          "id": "cobra-negative-id",
+          "kind": "negative",
+          "query": "QuantumLedgerReconciler",
+          "hit1": 0,
+          "mrr5": 0,
+          "ndcg5": null,
+          "artifact_recall5": null,
+          "first_relevant_rank": null,
+          "top5": [],
+          "negative_has_hits": false,
+          "assessment": null,
+          "curves": {
+            "native": {
+              "1000": {
+                "tokens": 59,
+                "evidence_coverage": null,
+                "artifact_coverage": null,
+                "evidence_precision": null
+              },
+              "2000": {
+                "tokens": 59,
+                "evidence_coverage": null,
+                "artifact_coverage": null,
+                "evidence_precision": null
+              },
+              "4000": {
+                "tokens": 59,
+                "evidence_coverage": null,
+                "artifact_coverage": null,
+                "evidence_precision": null
+              },
+              "8000": {
+                "tokens": 59,
+                "evidence_coverage": null,
+                "artifact_coverage": null,
+                "evidence_precision": null
+              }
+            },
+            "canonical": {
+              "1000": {
+                "tokens": 28,
+                "evidence_coverage": null,
+                "artifact_coverage": null,
+                "evidence_precision": null
+              },
+              "2000": {
+                "tokens": 28,
+                "evidence_coverage": null,
+                "artifact_coverage": null,
+                "evidence_precision": null
+              },
+              "4000": {
+                "tokens": 28,
+                "evidence_coverage": null,
+                "artifact_coverage": null,
+                "evidence_precision": null
+              },
+              "8000": {
+                "tokens": 28,
+                "evidence_coverage": null,
+                "artifact_coverage": null,
+                "evidence_precision": null
+              }
+            }
+          },
+          "cost_at_coverage": {
+            "native": {
+              "0.5": null,
+              "0.8": null,
+              "1.0": null
+            },
+            "canonical": {
+              "0.5": null,
+              "0.8": null,
+              "1.0": null
+            }
+          },
+          "collect": [],
+          "trace": [
+            {
+              "command": "query",
+              "native_tokens": 59,
+              "canonical_tokens": 28,
+              "utf8_bytes": 195,
+              "byte_proxy_units": 49,
+              "results": 0,
+              "next_offset": null
+            }
+          ]
+        },
+        {
+          "id": "cobra-negative-topic",
+          "kind": "negative",
+          "query": "How are flag values encrypted with an AWS KMS key?",
+          "hit1": 0,
+          "mrr5": 0,
+          "ndcg5": null,
+          "artifact_recall5": null,
+          "first_relevant_rank": null,
+          "top5": [
+            {
+              "path": "command_test.go",
+              "start": 2572,
+              "end": 2604,
+              "title": "key"
+            },
+            {
+              "path": "site/content/user_guide.md",
+              "start": 320,
+              "end": 336,
+              "title": "Required flags"
+            },
+            {
+              "path": "flag_groups.go",
+              "start": 167,
+              "end": 187,
+              "title": "validateOneRequiredFlagGroups"
+            },
+            {
+              "path": "bash_completions.go",
+              "start": 459,
+              "end": 496,
+              "title": "writeFlagHandler"
+            },
+            {
+              "path": "flag_groups.go",
+              "start": 144,
+              "end": 166,
+              "title": "validateRequiredFlagGroups"
+            }
+          ],
+          "negative_has_hits": true,
+          "assessment": null,
+          "curves": {
+            "native": {
+              "1000": {
+                "tokens": 538,
+                "evidence_coverage": null,
+                "artifact_coverage": null,
+                "evidence_precision": null
+              },
+              "2000": {
+                "tokens": 1555,
+                "evidence_coverage": null,
+                "artifact_coverage": null,
+                "evidence_precision": null
+              },
+              "4000": {
+                "tokens": 3859,
+                "evidence_coverage": null,
+                "artifact_coverage": null,
+                "evidence_precision": null
+              },
+              "8000": {
+                "tokens": 5756,
+                "evidence_coverage": null,
+                "artifact_coverage": null,
+                "evidence_precision": null
+              }
+            },
+            "canonical": {
+              "1000": {
+                "tokens": 830,
+                "evidence_coverage": null,
+                "artifact_coverage": null,
+                "evidence_precision": null
+              },
+              "2000": {
+                "tokens": 1532,
+                "evidence_coverage": null,
+                "artifact_coverage": null,
+                "evidence_precision": null
+              },
+              "4000": {
+                "tokens": 3920,
+                "evidence_coverage": null,
+                "artifact_coverage": null,
+                "evidence_precision": null
+              },
+              "8000": {
+                "tokens": 4745,
+                "evidence_coverage": null,
+                "artifact_coverage": null,
+                "evidence_precision": null
+              }
+            }
+          },
+          "cost_at_coverage": {
+            "native": {
+              "0.5": null,
+              "0.8": null,
+              "1.0": null
+            },
+            "canonical": {
+              "0.5": null,
+              "0.8": null,
+              "1.0": null
+            }
+          },
+          "collect": [],
+          "trace": [
+            {
+              "command": "query",
+              "native_tokens": 538,
+              "canonical_tokens": 220,
+              "utf8_bytes": 1639,
+              "byte_proxy_units": 410,
+              "results": 6,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 663,
+              "canonical_tokens": 610,
+              "utf8_bytes": 1847,
+              "byte_proxy_units": 462,
+              "results": 33,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 354,
+              "canonical_tokens": 303,
+              "utf8_bytes": 1197,
+              "byte_proxy_units": 300,
+              "results": 17,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 454,
+              "canonical_tokens": 399,
+              "utf8_bytes": 1385,
+              "byte_proxy_units": 347,
+              "results": 21,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 847,
+              "canonical_tokens": 793,
+              "utf8_bytes": 2571,
+              "byte_proxy_units": 643,
+              "results": 38,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 1003,
+              "canonical_tokens": 950,
+              "utf8_bytes": 3596,
+              "byte_proxy_units": 899,
+              "results": 58,
+              "next_offset": 58
+            },
+            {
+              "command": "show",
+              "native_tokens": 489,
+              "canonical_tokens": 437,
+              "utf8_bytes": 1500,
+              "byte_proxy_units": 375,
+              "results": 23,
+              "next_offset": null
+            },
+            {
+              "command": "neighbors",
+              "native_tokens": 479,
+              "canonical_tokens": 208,
+              "utf8_bytes": 1604,
+              "byte_proxy_units": 401,
+              "results": 8,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 632,
+              "canonical_tokens": 577,
+              "utf8_bytes": 1885,
+              "byte_proxy_units": 472,
+              "results": 29,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 297,
+              "canonical_tokens": 248,
+              "utf8_bytes": 1070,
+              "byte_proxy_units": 268,
+              "results": 11,
+              "next_offset": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "repo": "jsmn",
+      "split": "heldout",
+      "variant": "before",
+      "scope": "native",
+      "commit": "fdcef3ebf886fa210d14956d3c068a653e76a24e",
+      "tracked_files": 12,
+      "inventory_sha256": "747608f722a68766183642d3a4e1a8e69bc51eb2f39ec460a102bffea37223c8",
+      "indexed_files": 11,
+      "indexed_paths_sha256": "4c474de4fbf63ff9c784ed12b4564ebbf35dc36d15ac5541c12cb53c3724679f",
+      "discovery_required": 6,
+      "discovery_omissions": [
+        ".clang-format"
+      ],
+      "skipped": {
+        "unsupported-type": 1
+      },
+      "build_seconds": 0.14,
+      "summary": {
+        "positive_cases": 6,
+        "negative_cases": 2,
+        "hit1": 0.5,
+        "mrr5": 0.6805555555555555,
+        "ndcg5": 0.6430904026885146,
+        "artifact_recall5": 0.8333333333333334,
+        "negative_has_hits_rate": 0.5,
+        "coverage": {
+          "native": {
+            "1000": 0.0,
+            "2000": 0.32046568627450983,
+            "4000": 0.5537990196078432,
+            "8000": 0.8601973684210527
+          },
+          "canonical": {
+            "1000": 0.16666666666666666,
+            "2000": 0.32046568627450983,
+            "4000": 0.5537990196078432,
+            "8000": 0.8601973684210527
+          }
+        }
+      },
+      "cases": [
+        {
+          "id": "jsmn-definition",
+          "kind": "definition",
+          "query": "jsmn_init implementation",
+          "hit1": 0,
+          "mrr5": 0.25,
+          "ndcg5": 0.43067655807339306,
+          "artifact_recall5": 1.0,
+          "first_relevant_rank": 4,
+          "top5": [
+            {
+              "path": "README.md",
+              "start": 65,
+              "end": 128,
+              "title": "README.md preamble"
+            },
+            {
+              "path": "test/tests.c",
+              "start": 193,
+              "end": 256,
+              "title": "tests.c preamble"
+            },
+            {
+              "path": "test/tests.c",
+              "start": 257,
+              "end": 320,
+              "title": "tests.c preamble"
+            },
+            {
+              "path": "jsmn.h",
+              "start": 438,
+              "end": 468,
+              "title": "jsmnerr"
+            },
+            {
+              "path": "test/testutil.h",
+              "start": 65,
+              "end": 96,
+              "title": "testutil.h preamble"
+            }
+          ],
+          "negative_has_hits": null,
+          "assessment": null,
+          "curves": {
+            "native": {
+              "1000": {
+                "tokens": 488,
+                "evidence_coverage": 0.0,
+                "artifact_coverage": 0.0,
+                "evidence_precision": null
+              },
+              "2000": {
+                "tokens": 1568,
+                "evidence_coverage": 0.0,
+                "artifact_coverage": 0.0,
+                "evidence_precision": 0.0
+              },
+              "4000": {
+                "tokens": 3516,
+                "evidence_coverage": 1.0,
+                "artifact_coverage": 1.0,
+                "evidence_precision": 0.03937007874015748
+              },
+              "8000": {
+                "tokens": 6497,
+                "evidence_coverage": 1.0,
+                "artifact_coverage": 1.0,
+                "evidence_precision": 0.019011406844106463
+              }
+            },
+            "canonical": {
+              "1000": {
+                "tokens": 182,
+                "evidence_coverage": 0.0,
+                "artifact_coverage": 0.0,
+                "evidence_precision": null
+              },
+              "2000": {
+                "tokens": 1211,
+                "evidence_coverage": 0.0,
+                "artifact_coverage": 0.0,
+                "evidence_precision": 0.0
+              },
+              "4000": {
+                "tokens": 3531,
+                "evidence_coverage": 1.0,
+                "artifact_coverage": 1.0,
+                "evidence_precision": 0.03225806451612903
+              },
+              "8000": {
+                "tokens": 5790,
+                "evidence_coverage": 1.0,
+                "artifact_coverage": 1.0,
+                "evidence_precision": 0.019011406844106463
+              }
+            }
+          },
+          "cost_at_coverage": {
+            "native": {
+              "0.5": 3516,
+              "0.8": 3516,
+              "1.0": 3516
+            },
+            "canonical": {
+              "0.5": 3006,
+              "0.8": 3006,
+              "1.0": 3006
+            }
+          },
+          "collect": [],
+          "trace": [
+            {
+              "command": "query",
+              "native_tokens": 488,
+              "canonical_tokens": 182,
+              "utf8_bytes": 1314,
+              "byte_proxy_units": 329,
+              "results": 6,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 1080,
+              "canonical_tokens": 1029,
+              "utf8_bytes": 3460,
+              "byte_proxy_units": 865,
+              "results": 64,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 1283,
+              "canonical_tokens": 1231,
+              "utf8_bytes": 3595,
+              "byte_proxy_units": 899,
+              "results": 63,
+              "next_offset": 63
+            },
+            {
+              "command": "show-page",
+              "native_tokens": 154,
+              "canonical_tokens": 102,
+              "utf8_bytes": 380,
+              "byte_proxy_units": 95,
+              "results": 1,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 511,
+              "canonical_tokens": 462,
+              "utf8_bytes": 1543,
+              "byte_proxy_units": 386,
+              "results": 31,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 579,
+              "canonical_tokens": 525,
+              "utf8_bytes": 1630,
+              "byte_proxy_units": 408,
+              "results": 32,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 1004,
+              "canonical_tokens": 952,
+              "utf8_bytes": 2999,
+              "byte_proxy_units": 750,
+              "results": 64,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 1328,
+              "canonical_tokens": 1274,
+              "utf8_bytes": 3557,
+              "byte_proxy_units": 890,
+              "results": 63,
+              "next_offset": 63
+            },
+            {
+              "command": "neighbors",
+              "native_tokens": 70,
+              "canonical_tokens": 33,
+              "utf8_bytes": 193,
+              "byte_proxy_units": 49,
+              "results": 0,
+              "next_offset": null
+            }
+          ]
+        },
+        {
+          "id": "jsmn-caller",
+          "kind": "caller",
+          "query": "example calling jsmn_parse and checking errors",
+          "hit1": 0,
+          "mrr5": 0.3333333333333333,
+          "ndcg5": 0.3065735963827292,
+          "artifact_recall5": 0.5,
+          "first_relevant_rank": 3,
+          "top5": [
+            {
+              "path": "example/jsondump.c",
+              "start": 1,
+              "end": 64,
+              "title": "jsondump.c preamble"
+            },
+            {
+              "path": "README.md",
+              "start": 129,
+              "end": 182,
+              "title": "README.md preamble"
+            },
+            {
+              "path": "example/simple.c",
+              "start": 1,
+              "end": 64,
+              "title": "simple.c preamble"
+            },
+            {
+              "path": "Makefile",
+              "start": 1,
+              "end": 36,
+              "title": "Makefile preamble"
+            },
+            {
+              "path": "README.md",
+              "start": 1,
+              "end": 64,
+              "title": "README.md preamble"
+            }
+          ],
+          "negative_has_hits": null,
+          "assessment": null,
+          "curves": {
+            "native": {
+              "1000": {
+                "tokens": 525,
+                "evidence_coverage": 0.0,
+                "artifact_coverage": 0.0,
+                "evidence_precision": null
+              },
+              "2000": {
+                "tokens": 1702,
+                "evidence_coverage": 0.0,
+                "artifact_coverage": 0.0,
+                "evidence_precision": 0.0
+              },
+              "4000": {
+                "tokens": 3916,
+                "evidence_coverage": 0.4,
+                "artifact_coverage": 0.5,
+                "evidence_precision": 0.0392156862745098
+              },
+              "8000": {
+                "tokens": 6725,
+                "evidence_coverage": 1.0,
+                "artifact_coverage": 1.0,
+                "evidence_precision": 0.05357142857142857
+              }
+            },
+            "canonical": {
+              "1000": {
+                "tokens": 221,
+                "evidence_coverage": 0.0,
+                "artifact_coverage": 0.0,
+                "evidence_precision": null
+              },
+              "2000": {
+                "tokens": 1346,
+                "evidence_coverage": 0.0,
+                "artifact_coverage": 0.0,
+                "evidence_precision": 0.0
+              },
+              "4000": {
+                "tokens": 3456,
+                "evidence_coverage": 0.4,
+                "artifact_coverage": 0.5,
+                "evidence_precision": 0.0392156862745098
+              },
+              "8000": {
+                "tokens": 6074,
+                "evidence_coverage": 1.0,
+                "artifact_coverage": 1.0,
+                "evidence_precision": 0.05357142857142857
+              }
+            }
+          },
+          "cost_at_coverage": {
+            "native": {
+              "0.5": 6655,
+              "0.8": 6655,
+              "1.0": 6655
+            },
+            "canonical": {
+              "0.5": 6041,
+              "0.8": 6041,
+              "1.0": 6041
+            }
+          },
+          "collect": [],
+          "trace": [
+            {
+              "command": "query",
+              "native_tokens": 525,
+              "canonical_tokens": 221,
+              "utf8_bytes": 1539,
+              "byte_proxy_units": 385,
+              "results": 6,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 1177,
+              "canonical_tokens": 1125,
+              "utf8_bytes": 3542,
+              "byte_proxy_units": 886,
+              "results": 64,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 1002,
+              "canonical_tokens": 951,
+              "utf8_bytes": 3517,
+              "byte_proxy_units": 880,
+              "results": 54,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 1212,
+              "canonical_tokens": 1159,
+              "utf8_bytes": 3567,
+              "byte_proxy_units": 892,
+              "results": 60,
+              "next_offset": 60
+            },
+            {
+              "command": "show",
+              "native_tokens": 718,
+              "canonical_tokens": 669,
+              "utf8_bytes": 1955,
+              "byte_proxy_units": 489,
+              "results": 36,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 1017,
+              "canonical_tokens": 964,
+              "utf8_bytes": 3519,
+              "byte_proxy_units": 880,
+              "results": 59,
+              "next_offset": 59
+            },
+            {
+              "command": "show",
+              "native_tokens": 1004,
+              "canonical_tokens": 952,
+              "utf8_bytes": 2999,
+              "byte_proxy_units": 750,
+              "results": 64,
+              "next_offset": null
+            },
+            {
+              "command": "neighbors",
+              "native_tokens": 70,
+              "canonical_tokens": 33,
+              "utf8_bytes": 193,
+              "byte_proxy_units": 49,
+              "results": 0,
+              "next_offset": null
+            }
+          ]
+        },
+        {
+          "id": "jsmn-tests",
+          "kind": "test",
+          "query": "tests partial string parsing",
+          "hit1": 0,
+          "mrr5": 0.5,
+          "ndcg5": 0.6309297535714575,
+          "artifact_recall5": 1.0,
+          "first_relevant_rank": 2,
+          "top5": [
+            {
+              "path": "test/tests.c",
+              "start": 321,
+              "end": 359,
+              "title": "tests.c preamble"
+            },
+            {
+              "path": "test/tests.c",
+              "start": 65,
+              "end": 128,
+              "title": "tests.c preamble"
+            },
+            {
+              "path": "README.md",
+              "start": 1,
+              "end": 64,
+              "title": "README.md preamble"
+            },
+            {
+              "path": "Makefile",
+              "start": 1,
+              "end": 36,
+              "title": "Makefile preamble"
+            },
+            {
+              "path": "README.md",
+              "start": 129,
+              "end": 182,
+              "title": "README.md preamble"
+            }
+          ],
+          "negative_has_hits": null,
+          "assessment": null,
+          "curves": {
+            "native": {
+              "1000": {
+                "tokens": 478,
+                "evidence_coverage": 0.0,
+                "artifact_coverage": 0.0,
+                "evidence_precision": null
+              },
+              "2000": {
+                "tokens": 1351,
+                "evidence_coverage": 0.0,
+                "artifact_coverage": 0.0,
+                "evidence_precision": 0.0
+              },
+              "4000": {
+                "tokens": 3304,
+                "evidence_coverage": 0.0,
+                "artifact_coverage": 0.0,
+                "evidence_precision": 0.0
+              },
+              "8000": {
+                "tokens": 6975,
+                "evidence_coverage": 0.47368421052631576,
+                "artifact_coverage": 0.0,
+                "evidence_precision": 0.03734439834024896
+              }
+            },
+            "canonical": {
+              "1000": {
+                "tokens": 184,
+                "evidence_coverage": 0.0,
+                "artifact_coverage": 0.0,
+                "evidence_precision": null
+              },
+              "2000": {
+                "tokens": 1969,
+                "evidence_coverage": 0.0,
+                "artifact_coverage": 0.0,
+                "evidence_precision": 0.0
+              },
+              "4000": {
+                "tokens": 3962,
+                "evidence_coverage": 0.0,
+                "artifact_coverage": 0.0,
+                "evidence_precision": 0.0
+              },
+              "8000": {
+                "tokens": 6281,
+                "evidence_coverage": 0.47368421052631576,
+                "artifact_coverage": 0.0,
+                "evidence_precision": 0.03734439834024896
+              }
+            }
+          },
+          "cost_at_coverage": {
+            "native": {
+              "0.5": null,
+              "0.8": null,
+              "1.0": null
+            },
+            "canonical": {
+              "0.5": null,
+              "0.8": null,
+              "1.0": null
+            }
+          },
+          "collect": [],
+          "trace": [
+            {
+              "command": "query",
+              "native_tokens": 478,
+              "canonical_tokens": 184,
+              "utf8_bytes": 1435,
+              "byte_proxy_units": 359,
+              "results": 6,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 873,
+              "canonical_tokens": 821,
+              "utf8_bytes": 2714,
+              "byte_proxy_units": 679,
+              "results": 39,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 1017,
+              "canonical_tokens": 964,
+              "utf8_bytes": 3519,
+              "byte_proxy_units": 880,
+              "results": 59,
+              "next_offset": 59
+            },
+            {
+              "command": "show-page",
+              "native_tokens": 218,
+              "canonical_tokens": 165,
+              "utf8_bytes": 639,
+              "byte_proxy_units": 160,
+              "results": 5,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 718,
+              "canonical_tokens": 669,
+              "utf8_bytes": 1955,
+              "byte_proxy_units": 489,
+              "results": 36,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 1212,
+              "canonical_tokens": 1159,
+              "utf8_bytes": 3567,
+              "byte_proxy_units": 892,
+              "results": 60,
+              "next_offset": 60
+            },
+            {
+              "command": "show",
+              "native_tokens": 1386,
+              "canonical_tokens": 1335,
+              "utf8_bytes": 3584,
+              "byte_proxy_units": 896,
+              "results": 44,
+              "next_offset": 44
+            },
+            {
+              "command": "show",
+              "native_tokens": 1002,
+              "canonical_tokens": 951,
+              "utf8_bytes": 3517,
+              "byte_proxy_units": 880,
+              "results": 54,
+              "next_offset": null
+            },
+            {
+              "command": "neighbors",
+              "native_tokens": 71,
+              "canonical_tokens": 33,
+              "utf8_bytes": 193,
+              "byte_proxy_units": 49,
+              "results": 0,
+              "next_offset": null
+            }
+          ]
+        },
+        {
+          "id": "jsmn-nomem",
+          "kind": "multi",
+          "query": "How can parsing resume after JSMN_ERROR_NOMEM and what tests verify it?",
+          "hit1": 1,
+          "mrr5": 1.0,
+          "ndcg5": 0.8772153153380493,
+          "artifact_recall5": 1.0,
+          "first_relevant_rank": 1,
+          "top5": [
+            {
+              "path": "README.md",
+              "start": 129,
+              "end": 182,
+              "title": "README.md preamble"
+            },
+            {
+              "path": "example/jsondump.c",
+              "start": 1,
+              "end": 64,
+              "title": "jsondump.c preamble"
+            },
+            {
+              "path": "test/tests.c",
+              "start": 321,
+              "end": 359,
+              "title": "tests.c preamble"
+            },
+            {
+              "path": "test/tests.c",
+              "start": 129,
+              "end": 192,
+              "title": "tests.c preamble"
+            },
+            {
+              "path": "example/jsondump.c",
+              "start": 65,
+              "end": 128,
+              "title": "jsondump.c preamble"
+            }
+          ],
+          "negative_has_hits": null,
+          "assessment": null,
+          "curves": {
+            "native": {
+              "1000": {
+                "tokens": 518,
+                "evidence_coverage": 0.0,
+                "artifact_coverage": 0.0,
+                "evidence_precision": null
+              },
+              "2000": {
+                "tokens": 1520,
+                "evidence_coverage": 0.23529411764705882,
+                "artifact_coverage": 0.5,
+                "evidence_precision": 0.10256410256410256
+              },
+              "4000": {
+                "tokens": 3570,
+                "evidence_coverage": 0.23529411764705882,
+                "artifact_coverage": 0.5,
+                "evidence_precision": 0.029411764705882353
+              },
+              "8000": {
+                "tokens": 6860,
+                "evidence_coverage": 1.0,
+                "artifact_coverage": 1.0,
+                "evidence_precision": 0.05501618122977346
+              }
+            },
+            "canonical": {
+              "1000": {
+                "tokens": 207,
+                "evidence_coverage": 0.0,
+                "artifact_coverage": 0.0,
+                "evidence_precision": null
+              },
+              "2000": {
+                "tokens": 1158,
+                "evidence_coverage": 0.23529411764705882,
+                "artifact_coverage": 0.5,
+                "evidence_precision": 0.10256410256410256
+              },
+              "4000": {
+                "tokens": 3104,
+                "evidence_coverage": 0.23529411764705882,
+                "artifact_coverage": 0.5,
+                "evidence_precision": 0.029411764705882353
+              },
+              "8000": {
+                "tokens": 6204,
+                "evidence_coverage": 1.0,
+                "artifact_coverage": 1.0,
+                "evidence_precision": 0.05501618122977346
+              }
+            }
+          },
+          "cost_at_coverage": {
+            "native": {
+              "0.5": 5786,
+              "0.8": 5786,
+              "1.0": 5786
+            },
+            "canonical": {
+              "0.5": 5219,
+              "0.8": 5219,
+              "1.0": 5219
+            }
+          },
+          "collect": [],
+          "trace": [
+            {
+              "command": "query",
+              "native_tokens": 518,
+              "canonical_tokens": 207,
+              "utf8_bytes": 1454,
+              "byte_proxy_units": 364,
+              "results": 6,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 1002,
+              "canonical_tokens": 951,
+              "utf8_bytes": 3517,
+              "byte_proxy_units": 880,
+              "results": 54,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 1177,
+              "canonical_tokens": 1125,
+              "utf8_bytes": 3542,
+              "byte_proxy_units": 886,
+              "results": 64,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 873,
+              "canonical_tokens": 821,
+              "utf8_bytes": 2714,
+              "byte_proxy_units": 679,
+              "results": 39,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 1002,
+              "canonical_tokens": 953,
+              "utf8_bytes": 3228,
+              "byte_proxy_units": 807,
+              "results": 64,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 1214,
+              "canonical_tokens": 1162,
+              "utf8_bytes": 3422,
+              "byte_proxy_units": 856,
+              "results": 64,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 1004,
+              "canonical_tokens": 952,
+              "utf8_bytes": 2999,
+              "byte_proxy_units": 750,
+              "results": 64,
+              "next_offset": null
+            },
+            {
+              "command": "neighbors",
+              "native_tokens": 70,
+              "canonical_tokens": 33,
+              "utf8_bytes": 193,
+              "byte_proxy_units": 49,
+              "results": 0,
+              "next_offset": null
+            }
+          ]
+        },
+        {
+          "id": "jsmn-config",
+          "kind": "config",
+          "query": "Which tests enable JSMN_STRICT and JSMN_PARENT_LINKS?",
+          "hit1": 1,
+          "mrr5": 1.0,
+          "ndcg5": 1.0,
+          "artifact_recall5": 1.0,
+          "first_relevant_rank": 1,
+          "top5": [
+            {
+              "path": "Makefile",
+              "start": 1,
+              "end": 36,
+              "title": "Makefile preamble"
+            },
+            {
+              "path": "jsmn.h",
+              "start": 374,
+              "end": 437,
+              "title": "jsmnerr"
+            },
+            {
+              "path": "jsmn.h",
+              "start": 118,
+              "end": 181,
+              "title": "jsmnerr"
+            },
+            {
+              "path": "test/tests.c",
+              "start": 321,
+              "end": 359,
+              "title": "tests.c preamble"
+            },
+            {
+              "path": "test/tests.c",
+              "start": 129,
+              "end": 192,
+              "title": "tests.c preamble"
+            }
+          ],
+          "negative_has_hits": null,
+          "assessment": null,
+          "curves": {
+            "native": {
+              "1000": {
+                "tokens": 483,
+                "evidence_coverage": 0.0,
+                "artifact_coverage": 0.0,
+                "evidence_precision": null
+              },
+              "2000": {
+                "tokens": 1201,
+                "evidence_coverage": 1.0,
+                "artifact_coverage": 1.0,
+                "evidence_precision": 0.4642857142857143
+              },
+              "4000": {
+                "tokens": 3135,
+                "evidence_coverage": 1.0,
+                "artifact_coverage": 1.0,
+                "evidence_precision": 0.10236220472440945
+              },
+              "8000": {
+                "tokens": 6451,
+                "evidence_coverage": 1.0,
+                "artifact_coverage": 1.0,
+                "evidence_precision": 0.045936395759717315
+              }
+            },
+            "canonical": {
+              "1000": {
+                "tokens": 847,
+                "evidence_coverage": 1.0,
+                "artifact_coverage": 1.0,
+                "evidence_precision": 0.4642857142857143
+              },
+              "2000": {
+                "tokens": 1858,
+                "evidence_coverage": 1.0,
+                "artifact_coverage": 1.0,
+                "evidence_precision": 0.14285714285714285
+              },
+              "4000": {
+                "tokens": 3643,
+                "evidence_coverage": 1.0,
+                "artifact_coverage": 1.0,
+                "evidence_precision": 0.07692307692307693
+              },
+              "8000": {
+                "tokens": 5806,
+                "evidence_coverage": 1.0,
+                "artifact_coverage": 1.0,
+                "evidence_precision": 0.045936395759717315
+              }
+            }
+          },
+          "cost_at_coverage": {
+            "native": {
+              "0.5": 1201,
+              "0.8": 1201,
+              "1.0": 1201
+            },
+            "canonical": {
+              "0.5": 847,
+              "0.8": 847,
+              "1.0": 847
+            }
+          },
+          "collect": [],
+          "trace": [
+            {
+              "command": "query",
+              "native_tokens": 483,
+              "canonical_tokens": 178,
+              "utf8_bytes": 1319,
+              "byte_proxy_units": 330,
+              "results": 6,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 718,
+              "canonical_tokens": 669,
+              "utf8_bytes": 1955,
+              "byte_proxy_units": 489,
+              "results": 36,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 1061,
+              "canonical_tokens": 1011,
+              "utf8_bytes": 3420,
+              "byte_proxy_units": 855,
+              "results": 64,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 873,
+              "canonical_tokens": 821,
+              "utf8_bytes": 2714,
+              "byte_proxy_units": 679,
+              "results": 39,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 1017,
+              "canonical_tokens": 964,
+              "utf8_bytes": 3519,
+              "byte_proxy_units": 880,
+              "results": 59,
+              "next_offset": 59
+            },
+            {
+              "command": "show",
+              "native_tokens": 1017,
+              "canonical_tokens": 968,
+              "utf8_bytes": 3280,
+              "byte_proxy_units": 820,
+              "results": 64,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 1214,
+              "canonical_tokens": 1162,
+              "utf8_bytes": 3422,
+              "byte_proxy_units": 856,
+              "results": 64,
+              "next_offset": null
+            },
+            {
+              "command": "neighbors",
+              "native_tokens": 68,
+              "canonical_tokens": 33,
+              "utf8_bytes": 193,
+              "byte_proxy_units": 49,
+              "results": 0,
+              "next_offset": null
+            }
+          ]
+        },
+        {
+          "id": "jsmn-header",
+          "kind": "multi",
+          "query": "How do I include jsmn from multiple C files without duplicate symbols?",
+          "hit1": 1,
+          "mrr5": 1.0,
+          "ndcg5": 0.6131471927654584,
+          "artifact_recall5": 0.5,
+          "first_relevant_rank": 1,
+          "top5": [
+            {
+              "path": "README.md",
+              "start": 65,
+              "end": 128,
+              "title": "README.md preamble"
+            },
+            {
+              "path": "jsmn.h",
+              "start": 1,
+              "end": 53,
+              "title": "jsmn.h preamble"
+            },
+            {
+              "path": "LICENSE",
+              "start": 1,
+              "end": 20,
+              "title": "LICENSE preamble"
+            },
+            {
+              "path": "jsmn.h",
+              "start": 182,
+              "end": 245,
+              "title": "jsmnerr"
+            },
+            {
+              "path": "example/jsondump.c",
+              "start": 1,
+              "end": 64,
+              "title": "jsondump.c preamble"
+            }
+          ],
+          "negative_has_hits": null,
+          "assessment": null,
+          "curves": {
+            "native": {
+              "1000": {
+                "tokens": 557,
+                "evidence_coverage": 0.0,
+                "artifact_coverage": 0.0,
+                "evidence_precision": null
+              },
+              "2000": {
+                "tokens": 1637,
+                "evidence_coverage": 0.6875,
+                "artifact_coverage": 0.5,
+                "evidence_precision": 0.22448979591836735
+              },
+              "4000": {
+                "tokens": 2989,
+                "evidence_coverage": 0.6875,
+                "artifact_coverage": 0.5,
+                "evidence_precision": 0.09734513274336283
+              },
+              "8000": {
+                "tokens": 6723,
+                "evidence_coverage": 0.6875,
+                "artifact_coverage": 0.5,
+                "evidence_precision": 0.039568345323741004
+              }
+            },
+            "canonical": {
+              "1000": {
+                "tokens": 252,
+                "evidence_coverage": 0.0,
+                "artifact_coverage": 0.0,
+                "evidence_precision": null
+              },
+              "2000": {
+                "tokens": 1281,
+                "evidence_coverage": 0.6875,
+                "artifact_coverage": 0.5,
+                "evidence_precision": 0.22448979591836735
+              },
+              "4000": {
+                "tokens": 3657,
+                "evidence_coverage": 0.6875,
+                "artifact_coverage": 0.5,
+                "evidence_precision": 0.06321839080459771
+              },
+              "8000": {
+                "tokens": 6076,
+                "evidence_coverage": 0.6875,
+                "artifact_coverage": 0.5,
+                "evidence_precision": 0.039568345323741004
+              }
+            }
+          },
+          "cost_at_coverage": {
+            "native": {
+              "0.5": 1637,
+              "0.8": null,
+              "1.0": null
+            },
+            "canonical": {
+              "0.5": 1281,
+              "0.8": null,
+              "1.0": null
+            }
+          },
+          "collect": [],
+          "trace": [
+            {
+              "command": "query",
+              "native_tokens": 557,
+              "canonical_tokens": 252,
+              "utf8_bytes": 1550,
+              "byte_proxy_units": 388,
+              "results": 6,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 1080,
+              "canonical_tokens": 1029,
+              "utf8_bytes": 3460,
+              "byte_proxy_units": 865,
+              "results": 64,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 880,
+              "canonical_tokens": 827,
+              "utf8_bytes": 3027,
+              "byte_proxy_units": 757,
+              "results": 53,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 472,
+              "canonical_tokens": 424,
+              "utf8_bytes": 1805,
+              "byte_proxy_units": 452,
+              "results": 20,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 1177,
+              "canonical_tokens": 1125,
+              "utf8_bytes": 3542,
+              "byte_proxy_units": 886,
+              "results": 64,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 1394,
+              "canonical_tokens": 1342,
+              "utf8_bytes": 3539,
+              "byte_proxy_units": 885,
+              "results": 51,
+              "next_offset": 51
+            },
+            {
+              "command": "show",
+              "native_tokens": 1093,
+              "canonical_tokens": 1044,
+              "utf8_bytes": 3521,
+              "byte_proxy_units": 881,
+              "results": 64,
+              "next_offset": null
+            },
+            {
+              "command": "neighbors",
+              "native_tokens": 70,
+              "canonical_tokens": 33,
+              "utf8_bytes": 193,
+              "byte_proxy_units": 49,
+              "results": 0,
+              "next_offset": null
+            }
+          ]
+        },
+        {
+          "id": "jsmn-negative-id",
+          "kind": "negative",
+          "query": "QuantumLedgerReconciler",
+          "hit1": 0,
+          "mrr5": 0,
+          "ndcg5": null,
+          "artifact_recall5": null,
+          "first_relevant_rank": null,
+          "top5": [],
+          "negative_has_hits": false,
+          "assessment": null,
+          "curves": {
+            "native": {
+              "1000": {
+                "tokens": 64,
+                "evidence_coverage": null,
+                "artifact_coverage": null,
+                "evidence_precision": null
+              },
+              "2000": {
+                "tokens": 64,
+                "evidence_coverage": null,
+                "artifact_coverage": null,
+                "evidence_precision": null
+              },
+              "4000": {
+                "tokens": 64,
+                "evidence_coverage": null,
+                "artifact_coverage": null,
+                "evidence_precision": null
+              },
+              "8000": {
+                "tokens": 64,
+                "evidence_coverage": null,
+                "artifact_coverage": null,
+                "evidence_precision": null
+              }
+            },
+            "canonical": {
+              "1000": {
+                "tokens": 33,
+                "evidence_coverage": null,
+                "artifact_coverage": null,
+                "evidence_precision": null
+              },
+              "2000": {
+                "tokens": 33,
+                "evidence_coverage": null,
+                "artifact_coverage": null,
+                "evidence_precision": null
+              },
+              "4000": {
+                "tokens": 33,
+                "evidence_coverage": null,
+                "artifact_coverage": null,
+                "evidence_precision": null
+              },
+              "8000": {
+                "tokens": 33,
+                "evidence_coverage": null,
+                "artifact_coverage": null,
+                "evidence_precision": null
+              }
+            }
+          },
+          "cost_at_coverage": {
+            "native": {
+              "0.5": null,
+              "0.8": null,
+              "1.0": null
+            },
+            "canonical": {
+              "0.5": null,
+              "0.8": null,
+              "1.0": null
+            }
+          },
+          "collect": [],
+          "trace": [
+            {
+              "command": "query",
+              "native_tokens": 64,
+              "canonical_tokens": 33,
+              "utf8_bytes": 195,
+              "byte_proxy_units": 49,
+              "results": 0,
+              "next_offset": null
+            }
+          ]
+        },
+        {
+          "id": "jsmn-negative-topic",
+          "kind": "negative",
+          "query": "Where does the JSON parser validate a JSON Schema draft and resolve remote references?",
+          "hit1": 0,
+          "mrr5": 0,
+          "ndcg5": null,
+          "artifact_recall5": null,
+          "first_relevant_rank": null,
+          "top5": [
+            {
+              "path": "library.json",
+              "start": 1,
+              "end": 16,
+              "title": "library.json preamble"
+            },
+            {
+              "path": "example/simple.c",
+              "start": 1,
+              "end": 64,
+              "title": "simple.c preamble"
+            },
+            {
+              "path": "jsmn.h",
+              "start": 54,
+              "end": 117,
+              "title": "jsmnerr"
+            },
+            {
+              "path": "README.md",
+              "start": 1,
+              "end": 64,
+              "title": "README.md preamble"
+            },
+            {
+              "path": "README.md",
+              "start": 129,
+              "end": 182,
+              "title": "README.md preamble"
+            }
+          ],
+          "negative_has_hits": true,
+          "assessment": null,
+          "curves": {
+            "native": {
+              "1000": {
+                "tokens": 903,
+                "evidence_coverage": null,
+                "artifact_coverage": null,
+                "evidence_precision": null
+              },
+              "2000": {
+                "tokens": 903,
+                "evidence_coverage": null,
+                "artifact_coverage": null,
+                "evidence_precision": null
+              },
+              "4000": {
+                "tokens": 3359,
+                "evidence_coverage": null,
+                "artifact_coverage": null,
+                "evidence_precision": null
+              },
+              "8000": {
+                "tokens": 6450,
+                "evidence_coverage": null,
+                "artifact_coverage": null,
+                "evidence_precision": null
+              }
+            },
+            "canonical": {
+              "1000": {
+                "tokens": 544,
+                "evidence_coverage": null,
+                "artifact_coverage": null,
+                "evidence_precision": null
+              },
+              "2000": {
+                "tokens": 1855,
+                "evidence_coverage": null,
+                "artifact_coverage": null,
+                "evidence_precision": null
+              },
+              "4000": {
+                "tokens": 3807,
+                "evidence_coverage": null,
+                "artifact_coverage": null,
+                "evidence_precision": null
+              },
+              "8000": {
+                "tokens": 5744,
+                "evidence_coverage": null,
+                "artifact_coverage": null,
+                "evidence_precision": null
+              }
+            }
+          },
+          "cost_at_coverage": {
+            "native": {
+              "0.5": null,
+              "0.8": null,
+              "1.0": null
+            },
+            "canonical": {
+              "0.5": null,
+              "0.8": null,
+              "1.0": null
+            }
+          },
+          "collect": [],
+          "trace": [
+            {
+              "command": "query",
+              "native_tokens": 544,
+              "canonical_tokens": 236,
+              "utf8_bytes": 1685,
+              "byte_proxy_units": 422,
+              "results": 6,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 359,
+              "canonical_tokens": 308,
+              "utf8_bytes": 1072,
+              "byte_proxy_units": 268,
+              "results": 16,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 1212,
+              "canonical_tokens": 1159,
+              "utf8_bytes": 3567,
+              "byte_proxy_units": 892,
+              "results": 60,
+              "next_offset": 60
+            },
+            {
+              "command": "show-page",
+              "native_tokens": 205,
+              "canonical_tokens": 152,
+              "utf8_bytes": 576,
+              "byte_proxy_units": 144,
+              "results": 4,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 1039,
+              "canonical_tokens": 988,
+              "utf8_bytes": 3412,
+              "byte_proxy_units": 853,
+              "results": 64,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 1017,
+              "canonical_tokens": 964,
+              "utf8_bytes": 3519,
+              "byte_proxy_units": 880,
+              "results": 59,
+              "next_offset": 59
+            },
+            {
+              "command": "show",
+              "native_tokens": 1002,
+              "canonical_tokens": 951,
+              "utf8_bytes": 3517,
+              "byte_proxy_units": 880,
+              "results": 54,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 1002,
+              "canonical_tokens": 953,
+              "utf8_bytes": 3228,
+              "byte_proxy_units": 807,
+              "results": 64,
+              "next_offset": null
+            },
+            {
+              "command": "neighbors",
+              "native_tokens": 70,
+              "canonical_tokens": 33,
+              "utf8_bytes": 193,
+              "byte_proxy_units": 49,
+              "results": 0,
+              "next_offset": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
