@@ -1,9 +1,11 @@
 """Repository-neutral invariants; no benchmark vocabulary or pinned paths."""
 import contextlib
 import json
+import os
 from pathlib import Path
 import shutil
 import subprocess
+import sys
 import unittest
 from unittest import mock
 
@@ -301,6 +303,27 @@ class EvidenceTests(unittest.TestCase):
             rows = kb.search(db, 'PerformWork implementation')
         self.assertEqual(rows[0]['path'], 'b.py')
         self.assertEqual(next(r['kind'] for r in rows if r['path'] == 'a.pyi'), 'declaration')
+
+    def test_cli_emits_utf8_and_exact_lf_budget_on_pipes(self):
+        self.write('unicode.py', 'def UnicodeEvidence():\n    return "caf\u00e9\U0001f642"\n')
+        self.build()
+        run = subprocess.run([sys.executable, str(fixture.SCRIPT), '--repo', str(self.root),
+                              '--output', str(self.out), 'show', kb.ident('f', 'unicode.py'),
+                              '--budget', '256'], capture_output=True,
+                             env={**os.environ, 'PYTHONIOENCODING': 'ascii'})
+        self.assertEqual(run.returncode, 0, run.stderr)
+        self.assertLessEqual(len(run.stdout), 1024)
+        self.assertTrue(run.stdout.endswith(b'\n'))
+        self.assertFalse(run.stdout.endswith(b'\r\n'))
+        self.assertIn('caf\u00e9\U0001f642', run.stdout.decode('utf-8'))
+        json.loads(run.stdout)
+
+    def test_exact_filename_query_does_not_require_filename_in_its_body(self):
+        self.write('settings/build.xyz', 'compiler configuration\n')
+        self.build()
+        with contextlib.closing(self.db()) as db:
+            rows = kb.search(db, 'build.xyz')
+        self.assertEqual([r['path'] for r in rows], ['settings/build.xyz'])
 
 
 if __name__ == '__main__':

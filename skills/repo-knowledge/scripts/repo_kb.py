@@ -763,9 +763,11 @@ def search(db: sqlite3.Connection, query: str, aliases: dict | None = None, limi
         # Exact identifiers are separate from their components and cannot be
         # satisfied by Porter stemming (e.g. a nonexistent CamelCase name).
         exact_body = [x for x in plan['identifiers'] if re.search(r'(?<![\w$])' + re.escape(x) + r'(?![\w$])', item['body'])]
+        exact_location = plan['single_identifier'] and any(
+            x in {item['path'], PurePosixPath(item['path']).name} for x in plan['identifiers'])
         exact_definition = bool(item['symbol'] and any(
             item['symbol'] == x or item['symbol'].endswith('.' + x) for x in plan['identifiers']))
-        any_exact |= bool(exact_body)
+        any_exact |= bool(exact_body) or exact_location
         role = artifact_role(item)
         intent_bonus = 0.0
         if plan['intent'] == 'tests':
@@ -779,13 +781,13 @@ def search(db: sqlite3.Connection, query: str, aliases: dict | None = None, limi
             body = '\n'.join(item['body'].splitlines()[1:]) if exact_definition else item['body']
             call_shape = any(re.search(re.escape(x.split('.')[-1]) + r'\s*\(', body) for x in plan['identifiers'])
             intent_bonus = (2 if call_shape and not exact_definition else 0) - (2 if exact_definition else 0)
-        score = 6 * coverage + 2 * title_coverage + (2 if exact_body else 0)
+        score = 6 * coverage + 2 * title_coverage + (2 if exact_body or exact_location else 0)
         if plan['intent'] not in {'callers', 'tests', 'mixed'}:
             score += 2 if exact_definition else 0
         score += intent_bonus + 1 / (1 + position / 16)
         item.pop('rank')
         item.update(score=round(score, 6), coverage=round(coverage, 3), role=role,
-                    matched_terms=matched, exact_identifier=bool(exact_body))
+                    matched_terms=matched, exact_identifier=bool(exact_body) or exact_location)
         ranked.append(item)
     if plan['single_identifier']:
         ranked = [r for r in ranked if r['exact_identifier']] if any_exact else []
@@ -1084,7 +1086,12 @@ def main(argv: list[str] | None = None) -> int:
         parser.error('context must be between 0 and 20')
     try:
         text, code = run(args)
-        sys.stdout.write(text)
+        # JSON's byte contract must survive Windows newline translation and
+        # legacy pipe locales. StringIO remains usable for in-process callers.
+        if hasattr(sys.stdout, 'buffer'):
+            sys.stdout.buffer.write(text.encode('utf-8'))
+        else:
+            sys.stdout.write(text)
         return code
     except (KBError, OSError, ValueError, sqlite3.Error) as exc:
         sys.stderr.write('repo-knowledge: ' + str(exc) + '\n')
