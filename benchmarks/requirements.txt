@@ -1,0 +1,2 @@
+# Evaluation only; the installed skill remains standard-library-only.
+tiktoken==0.12.0

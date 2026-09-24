@@ -1,0 +1,3129 @@
+{
+  "manifest_sha256": "14dda961799749f02d619c92c0569c33fbade1163e480d247f981ae974d0fd64",
+  "baseline_commit": "be16aa81c40fb9dba8af3ac6e358dc6bf92d9694",
+  "tokenizer": "cl100k_base",
+  "tiktoken": "0.12.0",
+  "python": "3.12.1",
+  "platform": "Windows",
+  "sqlite": "3.43.1",
+  "implementation_sha256": "c9747175eed631ed0874d0346edf51eae01dc2e43f7ef497d29ff290d62bc16c",
+  "runs": [
+    {
+      "repo": "click",
+      "split": "dev",
+      "variant": "before",
+      "scope": "native",
+      "commit": "934813e4d421071a1b3db3973c02fe2721359a6e",
+      "tracked_files": 147,
+      "inventory_sha256": "acbbb43b47a412ec33f9781e3592c226246fedb339f44af943a2d2a4d2bd1106",
+      "indexed_files": 120,
+      "indexed_paths_sha256": "71ccb2fcf6ed26a3d9f5012a722588ac746ec34f9f558389392944e6ac3f3f5e",
+      "discovery_required": 5,
+      "discovery_omissions": [],
+      "skipped": {
+        "unsupported-type": 27
+      },
+      "build_seconds": 0.701,
+      "summary": {
+        "positive_cases": 6,
+        "negative_cases": 2,
+        "hit1": 0.3333333333333333,
+        "mrr5": 0.5333333333333333,
+        "ndcg5": 0.5499221388229276,
+        "artifact_recall5": 0.7777777777777778,
+        "negative_has_hits_rate": 1.0,
+        "coverage": {
+          "native": {
+            "1000": 0.0,
+            "2000": 0.17391304347826086,
+            "4000": 0.7028985507246377,
+            "8000": 0.7028985507246377
+          },
+          "canonical": {
+            "1000": 0.0,
+            "2000": 0.17391304347826086,
+            "4000": 0.7028985507246377,
+            "8000": 0.7028985507246377
+          }
+        }
+      },
+      "cases": [
+        {
+          "id": "click-definition",
+          "kind": "definition",
+          "query": "resolve_command",
+          "hit1": 0,
+          "mrr5": 0.2,
+          "ndcg5": 0.38685280723454163,
+          "artifact_recall5": 1.0,
+          "first_relevant_rank": 5,
+          "top5": [
+            {
+              "path": "tests/test_commands.py",
+              "start": 283,
+              "end": 288,
+              "title": "resolve_command"
+            },
+            {
+              "path": "examples/aliases/aliases.py",
+              "start": 70,
+              "end": 75,
+              "title": "resolve_command"
+            },
+            {
+              "path": "tests/typing/typing_aliased_group.py",
+              "start": 22,
+              "end": 30,
+              "title": "resolve_command"
+            },
+            {
+              "path": "src/click/shell_completion.py",
+              "start": 502,
+              "end": 558,
+              "title": "_resolve_context"
+            },
+            {
+              "path": "src/click/core.py",
+              "start": 1731,
+              "end": 1757,
+              "title": "resolve_command"
+            }
+          ],
+          "negative_has_hits": null,
+          "assessment": null,
+          "curves": {
+            "native": {
+              "1000": {
+                "tokens": 927,
+                "evidence_coverage": 0.0,
+                "artifact_coverage": 0.0,
+                "evidence_precision": 0.0
+              },
+              "2000": {
+                "tokens": 1186,
+                "evidence_coverage": 0.0,
+                "artifact_coverage": 0.0,
+                "evidence_precision": 0.0
+              },
+              "4000": {
+                "tokens": 3232,
+                "evidence_coverage": 1.0,
+                "artifact_coverage": 1.0,
+                "evidence_precision": 0.12
+              },
+              "8000": {
+                "tokens": 3232,
+                "evidence_coverage": 1.0,
+                "artifact_coverage": 1.0,
+                "evidence_precision": 0.12
+              }
+            },
+            "canonical": {
+              "1000": {
+                "tokens": 738,
+                "evidence_coverage": 0.0,
+                "artifact_coverage": 0.0,
+                "evidence_precision": 0.0
+              },
+              "2000": {
+                "tokens": 1558,
+                "evidence_coverage": 0.0,
+                "artifact_coverage": 0.0,
+                "evidence_precision": 0.0
+              },
+              "4000": {
+                "tokens": 2588,
+                "evidence_coverage": 1.0,
+                "artifact_coverage": 1.0,
+                "evidence_precision": 0.12
+              },
+              "8000": {
+                "tokens": 2588,
+                "evidence_coverage": 1.0,
+                "artifact_coverage": 1.0,
+                "evidence_precision": 0.12
+              }
+            }
+          },
+          "cost_at_coverage": {
+            "native": {
+              "0.5": 2688,
+              "0.8": 2688,
+              "1.0": 2688
+            },
+            "canonical": {
+              "0.5": 2132,
+              "0.8": 2132,
+              "1.0": 2132
+            }
+          },
+          "collect": [],
+          "trace": [
+            {
+              "command": "query",
+              "native_tokens": 500,
+              "canonical_tokens": 201,
+              "utf8_bytes": 1495,
+              "byte_proxy_units": 374,
+              "results": 6,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 207,
+              "canonical_tokens": 158,
+              "utf8_bytes": 664,
+              "byte_proxy_units": 166,
+              "results": 6,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 220,
+              "canonical_tokens": 169,
+              "utf8_bytes": 670,
+              "byte_proxy_units": 168,
+              "results": 6,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 259,
+              "canonical_tokens": 210,
+              "utf8_bytes": 848,
+              "byte_proxy_units": 212,
+              "results": 9,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 873,
+              "canonical_tokens": 820,
+              "utf8_bytes": 3395,
+              "byte_proxy_units": 849,
+              "results": 57,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 629,
+              "canonical_tokens": 574,
+              "utf8_bytes": 2197,
+              "byte_proxy_units": 550,
+              "results": 27,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 479,
+              "canonical_tokens": 427,
+              "utf8_bytes": 1597,
+              "byte_proxy_units": 400,
+              "results": 23,
+              "next_offset": null
+            },
+            {
+              "command": "neighbors",
+              "native_tokens": 65,
+              "canonical_tokens": 29,
+              "utf8_bytes": 193,
+              "byte_proxy_units": 49,
+              "results": 0,
+              "next_offset": null
+            }
+          ]
+        },
+        {
+          "id": "click-caller",
+          "kind": "caller",
+          "query": "Where is resolve_command called during invocation?",
+          "hit1": 0,
+          "mrr5": 0,
+          "ndcg5": 0.0,
+          "artifact_recall5": 0.0,
+          "first_relevant_rank": null,
+          "top5": [
+            {
+              "path": "src/click/shell_completion.py",
+              "start": 559,
+              "end": 603,
+              "title": "_resolve_incomplete"
+            },
+            {
+              "path": "src/click/core.py",
+              "start": 2428,
+              "end": 2451,
+              "title": "shell_complete"
+            },
+            {
+              "path": "src/click/shell_completion.py",
+              "start": 502,
+              "end": 558,
+              "title": "_resolve_context"
+            },
+            {
+              "path": "src/click/core.py",
+              "start": 965,
+              "end": 993,
+              "title": "shell_complete"
+            },
+            {
+              "path": "src/click/utils.py",
+              "start": 495,
+              "end": 503,
+              "title": "PacifyFlushWrapper"
+            }
+          ],
+          "negative_has_hits": null,
+          "assessment": null,
+          "curves": {
+            "native": {
+              "1000": {
+                "tokens": 542,
+                "evidence_coverage": 0.0,
+                "artifact_coverage": 0.0,
+                "evidence_precision": null
+              },
+              "2000": {
+                "tokens": 1936,
+                "evidence_coverage": 0.0,
+                "artifact_coverage": 0.0,
+                "evidence_precision": 0.0
+              },
+              "4000": {
+                "tokens": 3229,
+                "evidence_coverage": 0.0,
+                "artifact_coverage": 0.0,
+                "evidence_precision": 0.0
+              },
+              "8000": {
+                "tokens": 6485,
+                "evidence_coverage": 0.0,
+                "artifact_coverage": 0.0,
+                "evidence_precision": 0.0
+              }
+            },
+            "canonical": {
+              "1000": {
+                "tokens": 229,
+                "evidence_coverage": 0.0,
+                "artifact_coverage": 0.0,
+                "evidence_precision": null
+              },
+              "2000": {
+                "tokens": 1770,
+                "evidence_coverage": 0.0,
+                "artifact_coverage": 0.0,
+                "evidence_precision": 0.0
+              },
+              "4000": {
+                "tokens": 3524,
+                "evidence_coverage": 0.0,
+                "artifact_coverage": 0.0,
+                "evidence_precision": 0.0
+              },
+              "8000": {
+                "tokens": 5222,
+                "evidence_coverage": 0.0,
+                "artifact_coverage": 0.0,
+                "evidence_precision": 0.0
+              }
+            }
+          },
+          "cost_at_coverage": {
+            "native": {
+              "0.5": null,
+              "0.8": null,
+              "1.0": null
+            },
+            "canonical": {
+              "0.5": null,
+              "0.8": null,
+              "1.0": null
+            }
+          },
+          "collect": [],
+          "trace": [
+            {
+              "command": "query",
+              "native_tokens": 542,
+              "canonical_tokens": 229,
+              "utf8_bytes": 1663,
+              "byte_proxy_units": 416,
+              "results": 6,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 873,
+              "canonical_tokens": 823,
+              "utf8_bytes": 3362,
+              "byte_proxy_units": 841,
+              "results": 45,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 521,
+              "canonical_tokens": 469,
+              "utf8_bytes": 1848,
+              "byte_proxy_units": 462,
+              "results": 24,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 306,
+              "canonical_tokens": 249,
+              "utf8_bytes": 1014,
+              "byte_proxy_units": 254,
+              "results": 9,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 987,
+              "canonical_tokens": 934,
+              "utf8_bytes": 3577,
+              "byte_proxy_units": 895,
+              "results": 57,
+              "next_offset": 57
+            },
+            {
+              "command": "show",
+              "native_tokens": 873,
+              "canonical_tokens": 820,
+              "utf8_bytes": 3395,
+              "byte_proxy_units": 849,
+              "results": 57,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 545,
+              "canonical_tokens": 493,
+              "utf8_bytes": 2100,
+              "byte_proxy_units": 525,
+              "results": 29,
+              "next_offset": null
+            },
+            {
+              "command": "neighbors",
+              "native_tokens": 1051,
+              "canonical_tokens": 520,
+              "utf8_bytes": 3485,
+              "byte_proxy_units": 872,
+              "results": 19,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 373,
+              "canonical_tokens": 320,
+              "utf8_bytes": 1328,
+              "byte_proxy_units": 332,
+              "results": 14,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 414,
+              "canonical_tokens": 365,
+              "utf8_bytes": 1318,
+              "byte_proxy_units": 330,
+              "results": 19,
+              "next_offset": null
+            }
+          ]
+        },
+        {
+          "id": "click-tests",
+          "kind": "test",
+          "query": "tests for default_map flags",
+          "hit1": 0,
+          "mrr5": 0.5,
+          "ndcg5": 0.6309297535714575,
+          "artifact_recall5": 1.0,
+          "first_relevant_rank": 2,
+          "top5": [
+            {
+              "path": "tests/test_defaults.py",
+              "start": 64,
+              "end": 66,
+              "title": "test_flag_default_map"
+            },
+            {
+              "path": "tests/test_defaults.py",
+              "start": 71,
+              "end": 86,
+              "title": "foo"
+            },
+            {
+              "path": "tests/test_options.py",
+              "start": 228,
+              "end": 228,
+              "title": "test_show_default_default_map"
+            },
+            {
+              "path": "CHANGES.rst",
+              "start": 1,
+              "end": 64,
+              "title": "CHANGES.rst preamble"
+            },
+            {
+              "path": "tests/test_context.py",
+              "start": 315,
+              "end": 358,
+              "title": "cli"
+            }
+          ],
+          "negative_has_hits": null,
+          "assessment": null,
+          "curves": {
+            "native": {
+              "1000": {
+                "tokens": 831,
+                "evidence_coverage": 0.0,
+                "artifact_coverage": 0.0,
+                "evidence_precision": 0.0
+              },
+              "2000": {
+                "tokens": 1912,
+                "evidence_coverage": 0.0,
+                "artifact_coverage": 0.0,
+                "evidence_precision": 0.0
+              },
+              "4000": {
+                "tokens": 3451,
+                "evidence_coverage": 1.0,
+                "artifact_coverage": 1.0,
+                "evidence_precision": 0.0380952380952381
+              },
+              "8000": {
+                "tokens": 3451,
+                "evidence_coverage": 1.0,
+                "artifact_coverage": 1.0,
+                "evidence_precision": 0.0380952380952381
+              }
+            },
+            "canonical": {
+              "1000": {
+                "tokens": 418,
+                "evidence_coverage": 0.0,
+                "artifact_coverage": 0.0,
+                "evidence_precision": 0.0
+              },
+              "2000": {
+                "tokens": 1445,
+                "evidence_coverage": 0.0,
+                "artifact_coverage": 0.0,
+                "evidence_precision": 0.0
+              },
+              "4000": {
+                "tokens": 2712,
+                "evidence_coverage": 1.0,
+                "artifact_coverage": 1.0,
+                "evidence_precision": 0.0380952380952381
+              },
+              "8000": {
+                "tokens": 2712,
+                "evidence_coverage": 1.0,
+                "artifact_coverage": 1.0,
+                "evidence_precision": 0.0380952380952381
+              }
+            }
+          },
+          "cost_at_coverage": {
+            "native": {
+              "0.5": 3164,
+              "0.8": 3164,
+              "1.0": 3164
+            },
+            "canonical": {
+              "0.5": 2545,
+              "0.8": 2545,
+              "1.0": 2545
+            }
+          },
+          "collect": [],
+          "trace": [
+            {
+              "command": "query",
+              "native_tokens": 520,
+              "canonical_tokens": 212,
+              "utf8_bytes": 1534,
+              "byte_proxy_units": 384,
+              "results": 6,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 169,
+              "canonical_tokens": 117,
+              "utf8_bytes": 492,
+              "byte_proxy_units": 123,
+              "results": 3,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 142,
+              "canonical_tokens": 89,
+              "utf8_bytes": 424,
+              "byte_proxy_units": 106,
+              "results": 1,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 1081,
+              "canonical_tokens": 1027,
+              "utf8_bytes": 3592,
+              "byte_proxy_units": 898,
+              "results": 62,
+              "next_offset": 62
+            },
+            {
+              "command": "show",
+              "native_tokens": 714,
+              "canonical_tokens": 663,
+              "utf8_bytes": 2547,
+              "byte_proxy_units": 637,
+              "results": 44,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 141,
+              "canonical_tokens": 91,
+              "utf8_bytes": 401,
+              "byte_proxy_units": 101,
+              "results": 1,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 397,
+              "canonical_tokens": 346,
+              "utf8_bytes": 1276,
+              "byte_proxy_units": 319,
+              "results": 16,
+              "next_offset": null
+            },
+            {
+              "command": "neighbors",
+              "native_tokens": 122,
+              "canonical_tokens": 54,
+              "utf8_bytes": 365,
+              "byte_proxy_units": 92,
+              "results": 1,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 165,
+              "canonical_tokens": 113,
+              "utf8_bytes": 468,
+              "byte_proxy_units": 117,
+              "results": 3,
+              "next_offset": null
+            }
+          ]
+        },
+        {
+          "id": "click-defaults",
+          "kind": "multi",
+          "query": "How does default_map override defaults and which tests verify it?",
+          "hit1": 1,
+          "mrr5": 1.0,
+          "ndcg5": 0.6508205185601091,
+          "artifact_recall5": 0.6666666666666666,
+          "first_relevant_rank": 1,
+          "top5": [
+            {
+              "path": "docs/commands.rst",
+              "start": 449,
+              "end": 512,
+              "title": "commands.rst preamble"
+            },
+            {
+              "path": "tests/test_defaults.py",
+              "start": 64,
+              "end": 66,
+              "title": "test_flag_default_map"
+            },
+            {
+              "path": "docs/commands.rst",
+              "start": 385,
+              "end": 448,
+              "title": "commands.rst preamble"
+            },
+            {
+              "path": "tests/test_options.py",
+              "start": 228,
+              "end": 228,
+              "title": "test_show_default_default_map"
+            },
+            {
+              "path": "tests/test_defaults.py",
+              "start": 71,
+              "end": 86,
+              "title": "foo"
+            }
+          ],
+          "negative_has_hits": null,
+          "assessment": null,
+          "curves": {
+            "native": {
+              "1000": {
+                "tokens": 546,
+                "evidence_coverage": 0.0,
+                "artifact_coverage": 0.0,
+                "evidence_precision": null
+              },
+              "2000": {
+                "tokens": 1762,
+                "evidence_coverage": 0.043478260869565216,
+                "artifact_coverage": 0.0,
+                "evidence_precision": 0.020833333333333332
+              },
+              "4000": {
+                "tokens": 3971,
+                "evidence_coverage": 0.21739130434782608,
+                "artifact_coverage": 0.3333333333333333,
+                "evidence_precision": 0.043859649122807015
+              },
+              "8000": {
+                "tokens": 4457,
+                "evidence_coverage": 0.21739130434782608,
+                "artifact_coverage": 0.3333333333333333,
+                "evidence_precision": 0.03787878787878788
+              }
+            },
+            "canonical": {
+              "1000": {
+                "tokens": 226,
+                "evidence_coverage": 0.0,
+                "artifact_coverage": 0.0,
+                "evidence_precision": null
+              },
+              "2000": {
+                "tokens": 1286,
+                "evidence_coverage": 0.043478260869565216,
+                "artifact_coverage": 0.0,
+                "evidence_precision": 0.020833333333333332
+              },
+              "4000": {
+                "tokens": 3519,
+                "evidence_coverage": 0.21739130434782608,
+                "artifact_coverage": 0.3333333333333333,
+                "evidence_precision": 0.03787878787878788
+              },
+              "8000": {
+                "tokens": 3519,
+                "evidence_coverage": 0.21739130434782608,
+                "artifact_coverage": 0.3333333333333333,
+                "evidence_precision": 0.03787878787878788
+              }
+            }
+          },
+          "cost_at_coverage": {
+            "native": {
+              "0.5": null,
+              "0.8": null,
+              "1.0": null
+            },
+            "canonical": {
+              "0.5": null,
+              "0.8": null,
+              "1.0": null
+            }
+          },
+          "collect": [],
+          "trace": [
+            {
+              "command": "query",
+              "native_tokens": 546,
+              "canonical_tokens": 226,
+              "utf8_bytes": 1650,
+              "byte_proxy_units": 413,
+              "results": 6,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 905,
+              "canonical_tokens": 854,
+              "utf8_bytes": 3187,
+              "byte_proxy_units": 797,
+              "results": 64,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 169,
+              "canonical_tokens": 117,
+              "utf8_bytes": 492,
+              "byte_proxy_units": 123,
+              "results": 3,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 142,
+              "canonical_tokens": 89,
+              "utf8_bytes": 424,
+              "byte_proxy_units": 106,
+              "results": 1,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 896,
+              "canonical_tokens": 844,
+              "utf8_bytes": 3534,
+              "byte_proxy_units": 884,
+              "results": 48,
+              "next_offset": 48
+            },
+            {
+              "command": "show",
+              "native_tokens": 397,
+              "canonical_tokens": 346,
+              "utf8_bytes": 1276,
+              "byte_proxy_units": 319,
+              "results": 16,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 188,
+              "canonical_tokens": 136,
+              "utf8_bytes": 586,
+              "byte_proxy_units": 147,
+              "results": 4,
+              "next_offset": null
+            },
+            {
+              "command": "neighbors",
+              "native_tokens": 389,
+              "canonical_tokens": 181,
+              "utf8_bytes": 1272,
+              "byte_proxy_units": 318,
+              "results": 6,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 339,
+              "canonical_tokens": 290,
+              "utf8_bytes": 1060,
+              "byte_proxy_units": 265,
+              "results": 15,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 486,
+              "canonical_tokens": 436,
+              "utf8_bytes": 1690,
+              "byte_proxy_units": 423,
+              "results": 21,
+              "next_offset": null
+            }
+          ]
+        },
+        {
+          "id": "click-confirm",
+          "kind": "behavior",
+          "query": "How does confirm abort on a negative answer?",
+          "hit1": 1,
+          "mrr5": 1.0,
+          "ndcg5": 1.0,
+          "artifact_recall5": 1.0,
+          "first_relevant_rank": 1,
+          "top5": [
+            {
+              "path": "src/click/termui.py",
+              "start": 201,
+              "end": 250,
+              "title": "will"
+            },
+            {
+              "path": "src/click/termui.py",
+              "start": 190,
+              "end": 200,
+              "title": "confirm"
+            },
+            {
+              "path": "docs/prompts.rst",
+              "start": 1,
+              "end": 48,
+              "title": "prompts.rst preamble"
+            },
+            {
+              "path": "src/click/decorators.py",
+              "start": 380,
+              "end": 394,
+              "title": "callback"
+            },
+            {
+              "path": "docs/options.rst",
+              "start": 577,
+              "end": 640,
+              "title": "options.rst preamble"
+            }
+          ],
+          "negative_has_hits": null,
+          "assessment": null,
+          "curves": {
+            "native": {
+              "1000": {
+                "tokens": 523,
+                "evidence_coverage": 0.0,
+                "artifact_coverage": 0.0,
+                "evidence_precision": null
+              },
+              "2000": {
+                "tokens": 1405,
+                "evidence_coverage": 1.0,
+                "artifact_coverage": 1.0,
+                "evidence_precision": 0.3181818181818182
+              },
+              "4000": {
+                "tokens": 3561,
+                "evidence_coverage": 1.0,
+                "artifact_coverage": 1.0,
+                "evidence_precision": 0.10606060606060606
+              },
+              "8000": {
+                "tokens": 6519,
+                "evidence_coverage": 1.0,
+                "artifact_coverage": 1.0,
+                "evidence_precision": 0.0639269406392694
+              }
+            },
+            "canonical": {
+              "1000": {
+                "tokens": 203,
+                "evidence_coverage": 0.0,
+                "artifact_coverage": 0.0,
+                "evidence_precision": null
+              },
+              "2000": {
+                "tokens": 1803,
+                "evidence_coverage": 1.0,
+                "artifact_coverage": 1.0,
+                "evidence_precision": 0.18181818181818182
+              },
+              "4000": {
+                "tokens": 3875,
+                "evidence_coverage": 1.0,
+                "artifact_coverage": 1.0,
+                "evidence_precision": 0.07777777777777778
+              },
+              "8000": {
+                "tokens": 5312,
+                "evidence_coverage": 1.0,
+                "artifact_coverage": 1.0,
+                "evidence_precision": 0.0639269406392694
+              }
+            }
+          },
+          "cost_at_coverage": {
+            "native": {
+              "0.5": 1405,
+              "0.8": 1405,
+              "1.0": 1405
+            },
+            "canonical": {
+              "0.5": 1037,
+              "0.8": 1037,
+              "1.0": 1037
+            }
+          },
+          "collect": [],
+          "trace": [
+            {
+              "command": "query",
+              "native_tokens": 523,
+              "canonical_tokens": 203,
+              "utf8_bytes": 1467,
+              "byte_proxy_units": 367,
+              "results": 6,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 882,
+              "canonical_tokens": 834,
+              "utf8_bytes": 3227,
+              "byte_proxy_units": 807,
+              "results": 50,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 822,
+              "canonical_tokens": 766,
+              "utf8_bytes": 2992,
+              "byte_proxy_units": 748,
+              "results": 48,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 348,
+              "canonical_tokens": 298,
+              "utf8_bytes": 1165,
+              "byte_proxy_units": 292,
+              "results": 15,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 986,
+              "canonical_tokens": 934,
+              "utf8_bytes": 3599,
+              "byte_proxy_units": 900,
+              "results": 61,
+              "next_offset": 61
+            },
+            {
+              "command": "show",
+              "native_tokens": 894,
+              "canonical_tokens": 840,
+              "utf8_bytes": 3595,
+              "byte_proxy_units": 899,
+              "results": 49,
+              "next_offset": 49
+            },
+            {
+              "command": "show",
+              "native_tokens": 287,
+              "canonical_tokens": 238,
+              "utf8_bytes": 890,
+              "byte_proxy_units": 223,
+              "results": 11,
+              "next_offset": null
+            },
+            {
+              "command": "neighbors",
+              "native_tokens": 1006,
+              "canonical_tokens": 527,
+              "utf8_bytes": 3319,
+              "byte_proxy_units": 830,
+              "results": 20,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 371,
+              "canonical_tokens": 320,
+              "utf8_bytes": 1169,
+              "byte_proxy_units": 293,
+              "results": 16,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 400,
+              "canonical_tokens": 352,
+              "utf8_bytes": 1258,
+              "byte_proxy_units": 315,
+              "results": 16,
+              "next_offset": null
+            }
+          ]
+        },
+        {
+          "id": "click-ci",
+          "kind": "config",
+          "query": "Which Python versions and operating systems run in the tests workflow?",
+          "hit1": 0,
+          "mrr5": 0.5,
+          "ndcg5": 0.6309297535714575,
+          "artifact_recall5": 1.0,
+          "first_relevant_rank": 2,
+          "top5": [
+            {
+              "path": "pyproject.toml",
+              "start": 1,
+              "end": 64,
+              "title": "pyproject.toml preamble"
+            },
+            {
+              "path": ".github/workflows/tests.yaml",
+              "start": 1,
+              "end": 51,
+              "title": "tests.yaml preamble"
+            },
+            {
+              "path": ".github/workflows/publish.yaml",
+              "start": 1,
+              "end": 64,
+              "title": "publish.yaml preamble"
+            },
+            {
+              "path": "docs/unicode-support.rst",
+              "start": 65,
+              "end": 112,
+              "title": "unicode-support.rst preamble"
+            },
+            {
+              "path": "docs/virtualenv.rst",
+              "start": 1,
+              "end": 54,
+              "title": "virtualenv.rst preamble"
+            }
+          ],
+          "negative_has_hits": null,
+          "assessment": null,
+          "curves": {
+            "native": {
+              "1000": {
+                "tokens": 561,
+                "evidence_coverage": 0.0,
+                "artifact_coverage": 0.0,
+                "evidence_precision": null
+              },
+              "2000": {
+                "tokens": 1557,
+                "evidence_coverage": 0.0,
+                "artifact_coverage": 0.0,
+                "evidence_precision": 0.0
+              },
+              "4000": {
+                "tokens": 3706,
+                "evidence_coverage": 1.0,
+                "artifact_coverage": 1.0,
+                "evidence_precision": 0.07317073170731707
+              },
+              "8000": {
+                "tokens": 6694,
+                "evidence_coverage": 1.0,
+                "artifact_coverage": 1.0,
+                "evidence_precision": 0.0425531914893617
+              }
+            },
+            "canonical": {
+              "1000": {
+                "tokens": 242,
+                "evidence_coverage": 0.0,
+                "artifact_coverage": 0.0,
+                "evidence_precision": null
+              },
+              "2000": {
+                "tokens": 1184,
+                "evidence_coverage": 0.0,
+                "artifact_coverage": 0.0,
+                "evidence_precision": 0.0
+              },
+              "4000": {
+                "tokens": 3231,
+                "evidence_coverage": 1.0,
+                "artifact_coverage": 1.0,
+                "evidence_precision": 0.07317073170731707
+              },
+              "8000": {
+                "tokens": 5942,
+                "evidence_coverage": 1.0,
+                "artifact_coverage": 1.0,
+                "evidence_precision": 0.0425531914893617
+              }
+            }
+          },
+          "cost_at_coverage": {
+            "native": {
+              "0.5": 2612,
+              "0.8": 2612,
+              "1.0": 2612
+            },
+            "canonical": {
+              "0.5": 2188,
+              "0.8": 2188,
+              "1.0": 2188
+            }
+          },
+          "collect": [],
+          "trace": [
+            {
+              "command": "query",
+              "native_tokens": 561,
+              "canonical_tokens": 242,
+              "utf8_bytes": 1773,
+              "byte_proxy_units": 444,
+              "results": 6,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 996,
+              "canonical_tokens": 942,
+              "utf8_bytes": 3205,
+              "byte_proxy_units": 802,
+              "results": 64,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 1055,
+              "canonical_tokens": 1004,
+              "utf8_bytes": 3187,
+              "byte_proxy_units": 797,
+              "results": 51,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 1094,
+              "canonical_tokens": 1043,
+              "utf8_bytes": 3566,
+              "byte_proxy_units": 892,
+              "results": 57,
+              "next_offset": 57
+            },
+            {
+              "command": "show",
+              "native_tokens": 870,
+              "canonical_tokens": 817,
+              "utf8_bytes": 3267,
+              "byte_proxy_units": 817,
+              "results": 48,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 777,
+              "canonical_tokens": 726,
+              "utf8_bytes": 2767,
+              "byte_proxy_units": 692,
+              "results": 54,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 974,
+              "canonical_tokens": 922,
+              "utf8_bytes": 3531,
+              "byte_proxy_units": 883,
+              "results": 64,
+              "next_offset": null
+            },
+            {
+              "command": "neighbors",
+              "native_tokens": 120,
+              "canonical_tokens": 51,
+              "utf8_bytes": 359,
+              "byte_proxy_units": 90,
+              "results": 1,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 247,
+              "canonical_tokens": 195,
+              "utf8_bytes": 787,
+              "byte_proxy_units": 197,
+              "results": 8,
+              "next_offset": null
+            }
+          ]
+        },
+        {
+          "id": "click-negative-id",
+          "kind": "negative",
+          "query": "QuantumLedgerReconciler",
+          "hit1": 0,
+          "mrr5": 0,
+          "ndcg5": null,
+          "artifact_recall5": null,
+          "first_relevant_rank": null,
+          "top5": [
+            {
+              "path": "docs/advanced.rst",
+              "start": 193,
+              "end": 256,
+              "title": "advanced.rst preamble"
+            }
+          ],
+          "negative_has_hits": true,
+          "assessment": null,
+          "curves": {
+            "native": {
+              "1000": {
+                "tokens": 124,
+                "evidence_coverage": null,
+                "artifact_coverage": null,
+                "evidence_precision": null
+              },
+              "2000": {
+                "tokens": 1811,
+                "evidence_coverage": null,
+                "artifact_coverage": null,
+                "evidence_precision": null
+              },
+              "4000": {
+                "tokens": 2507,
+                "evidence_coverage": null,
+                "artifact_coverage": null,
+                "evidence_precision": null
+              },
+              "8000": {
+                "tokens": 2507,
+                "evidence_coverage": null,
+                "artifact_coverage": null,
+                "evidence_precision": null
+              }
+            },
+            "canonical": {
+              "1000": {
+                "tokens": 901,
+                "evidence_coverage": null,
+                "artifact_coverage": null,
+                "evidence_precision": null
+              },
+              "2000": {
+                "tokens": 1580,
+                "evidence_coverage": null,
+                "artifact_coverage": null,
+                "evidence_precision": null
+              },
+              "4000": {
+                "tokens": 2016,
+                "evidence_coverage": null,
+                "artifact_coverage": null,
+                "evidence_precision": null
+              },
+              "8000": {
+                "tokens": 2016,
+                "evidence_coverage": null,
+                "artifact_coverage": null,
+                "evidence_precision": null
+              }
+            }
+          },
+          "cost_at_coverage": {
+            "native": {
+              "0.5": null,
+              "0.8": null,
+              "1.0": null
+            },
+            "canonical": {
+              "0.5": null,
+              "0.8": null,
+              "1.0": null
+            }
+          },
+          "collect": [],
+          "trace": [
+            {
+              "command": "query",
+              "native_tokens": 124,
+              "canonical_tokens": 48,
+              "utf8_bytes": 372,
+              "byte_proxy_units": 93,
+              "results": 1,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 905,
+              "canonical_tokens": 853,
+              "utf8_bytes": 3540,
+              "byte_proxy_units": 885,
+              "results": 47,
+              "next_offset": 47
+            },
+            {
+              "command": "show-page",
+              "native_tokens": 388,
+              "canonical_tokens": 336,
+              "utf8_bytes": 1429,
+              "byte_proxy_units": 358,
+              "results": 17,
+              "next_offset": null
+            },
+            {
+              "command": "neighbors",
+              "native_tokens": 394,
+              "canonical_tokens": 183,
+              "utf8_bytes": 1271,
+              "byte_proxy_units": 318,
+              "results": 6,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 210,
+              "canonical_tokens": 160,
+              "utf8_bytes": 671,
+              "byte_proxy_units": 168,
+              "results": 7,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 486,
+              "canonical_tokens": 436,
+              "utf8_bytes": 1690,
+              "byte_proxy_units": 423,
+              "results": 21,
+              "next_offset": null
+            }
+          ]
+        },
+        {
+          "id": "click-negative-topic",
+          "kind": "negative",
+          "query": "How are command callbacks replicated through a Raft consensus cluster?",
+          "hit1": 0,
+          "mrr5": 0,
+          "ndcg5": null,
+          "artifact_recall5": null,
+          "first_relevant_rank": null,
+          "top5": [
+            {
+              "path": "docs/commands.rst",
+              "start": 513,
+              "end": 571,
+              "title": "commands.rst preamble"
+            },
+            {
+              "path": "docs/commands.rst",
+              "start": 385,
+              "end": 448,
+              "title": "commands.rst preamble"
+            },
+            {
+              "path": "examples/validation/validation.py",
+              "start": 31,
+              "end": 48,
+              "title": "cli"
+            },
+            {
+              "path": "examples/imagepipe/imagepipe.py",
+              "start": 23,
+              "end": 41,
+              "title": "process_commands"
+            },
+            {
+              "path": "docs/advanced.rst",
+              "start": 193,
+              "end": 256,
+              "title": "advanced.rst preamble"
+            }
+          ],
+          "negative_has_hits": true,
+          "assessment": null,
+          "curves": {
+            "native": {
+              "1000": {
+                "tokens": 510,
+                "evidence_coverage": null,
+                "artifact_coverage": null,
+                "evidence_precision": null
+              },
+              "2000": {
+                "tokens": 1706,
+                "evidence_coverage": null,
+                "artifact_coverage": null,
+                "evidence_precision": null
+              },
+              "4000": {
+                "tokens": 3408,
+                "evidence_coverage": null,
+                "artifact_coverage": null,
+                "evidence_precision": null
+              },
+              "8000": {
+                "tokens": 7005,
+                "evidence_coverage": null,
+                "artifact_coverage": null,
+                "evidence_precision": null
+              }
+            },
+            "canonical": {
+              "1000": {
+                "tokens": 203,
+                "evidence_coverage": null,
+                "artifact_coverage": null,
+                "evidence_precision": null
+              },
+              "2000": {
+                "tokens": 1992,
+                "evidence_coverage": null,
+                "artifact_coverage": null,
+                "evidence_precision": null
+              },
+              "4000": {
+                "tokens": 3738,
+                "evidence_coverage": null,
+                "artifact_coverage": null,
+                "evidence_precision": null
+              },
+              "8000": {
+                "tokens": 5821,
+                "evidence_coverage": null,
+                "artifact_coverage": null,
+                "evidence_precision": null
+              }
+            }
+          },
+          "cost_at_coverage": {
+            "native": {
+              "0.5": null,
+              "0.8": null,
+              "1.0": null
+            },
+            "canonical": {
+              "0.5": null,
+              "0.8": null,
+              "1.0": null
+            }
+          },
+          "collect": [],
+          "trace": [
+            {
+              "command": "query",
+              "native_tokens": 510,
+              "canonical_tokens": 203,
+              "utf8_bytes": 1611,
+              "byte_proxy_units": 403,
+              "results": 6,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 940,
+              "canonical_tokens": 887,
+              "utf8_bytes": 3523,
+              "byte_proxy_units": 881,
+              "results": 52,
+              "next_offset": 52
+            },
+            {
+              "command": "show-page",
+              "native_tokens": 256,
+              "canonical_tokens": 203,
+              "utf8_bytes": 870,
+              "byte_proxy_units": 218,
+              "results": 7,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 416,
+              "canonical_tokens": 368,
+              "utf8_bytes": 1383,
+              "byte_proxy_units": 346,
+              "results": 18,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 381,
+              "canonical_tokens": 331,
+              "utf8_bytes": 1326,
+              "byte_proxy_units": 332,
+              "results": 19,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 905,
+              "canonical_tokens": 853,
+              "utf8_bytes": 3540,
+              "byte_proxy_units": 885,
+              "results": 47,
+              "next_offset": 47
+            },
+            {
+              "command": "show",
+              "native_tokens": 948,
+              "canonical_tokens": 893,
+              "utf8_bytes": 3347,
+              "byte_proxy_units": 837,
+              "results": 49,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 896,
+              "canonical_tokens": 844,
+              "utf8_bytes": 3534,
+              "byte_proxy_units": 884,
+              "results": 48,
+              "next_offset": 48
+            },
+            {
+              "command": "neighbors",
+              "native_tokens": 773,
+              "canonical_tokens": 359,
+              "utf8_bytes": 2558,
+              "byte_proxy_units": 640,
+              "results": 13,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 339,
+              "canonical_tokens": 290,
+              "utf8_bytes": 1060,
+              "byte_proxy_units": 265,
+              "results": 15,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 641,
+              "canonical_tokens": 590,
+              "utf8_bytes": 2561,
+              "byte_proxy_units": 641,
+              "results": 29,
+              "next_offset": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "repo": "express",
+      "split": "dev",
+      "variant": "before",
+      "scope": "native",
+      "commit": "1faf228935aa0a13111f92c28ee795be64ce3f0f",
+      "tracked_files": 234,
+      "inventory_sha256": "7717bed38c486365cd20f1688b59d5a2e9560fa9c26005cba78f5b3a66d8bc29",
+      "indexed_files": 196,
+      "indexed_paths_sha256": "9c1857b7b206fc4f48b1fed74908be5b9ee9387865ba57f5c8287fc1a3a5e7bc",
+      "discovery_required": 6,
+      "discovery_omissions": [
+        "examples/auth/views/login.ejs"
+      ],
+      "skipped": {
+        "unsupported-type": 38
+      },
+      "build_seconds": 0.695,
+      "summary": {
+        "positive_cases": 6,
+        "negative_cases": 2,
+        "hit1": 0.3333333333333333,
+        "mrr5": 0.5,
+        "ndcg5": 0.39404610036113413,
+        "artifact_recall5": 0.47222222222222227,
+        "negative_has_hits_rate": 0.5,
+        "coverage": {
+          "native": {
+            "1000": 0.0,
+            "2000": 0.16339869281045752,
+            "4000": 0.4411764705882353,
+            "8000": 0.5
+          },
+          "canonical": {
+            "1000": 0.0,
+            "2000": 0.3300653594771242,
+            "4000": 0.5,
+            "8000": 0.5
+          }
+        }
+      },
+      "cases": [
+        {
+          "id": "express-definition",
+          "kind": "definition",
+          "query": "res.json implementation",
+          "hit1": 0,
+          "mrr5": 0,
+          "ndcg5": 0.0,
+          "artifact_recall5": 0.0,
+          "first_relevant_rank": null,
+          "top5": [
+            {
+              "path": "examples/view-constructor/github-view.js",
+              "start": 23,
+              "end": 53,
+              "title": "GithubView"
+            },
+            {
+              "path": "test/support/utils.js",
+              "start": 79,
+              "end": 86,
+              "title": "shouldSkipQuery"
+            },
+            {
+              "path": "examples/route-middleware/index.js",
+              "start": 36,
+              "end": 49,
+              "title": "andRestrictToSelf"
+            },
+            {
+              "path": "History.md",
+              "start": 3265,
+              "end": 3328,
+              "title": "History.md preamble"
+            },
+            {
+              "path": "examples/route-middleware/index.js",
+              "start": 50,
+              "end": 90,
+              "title": "andRestrictTo"
+            }
+          ],
+          "negative_has_hits": null,
+          "assessment": null,
+          "curves": {
+            "native": {
+              "1000": {
+                "tokens": 538,
+                "evidence_coverage": 0.0,
+                "artifact_coverage": 0.0,
+                "evidence_precision": null
+              },
+              "2000": {
+                "tokens": 1702,
+                "evidence_coverage": 0.0,
+                "artifact_coverage": 0.0,
+                "evidence_precision": 0.0
+              },
+              "4000": {
+                "tokens": 3396,
+                "evidence_coverage": 0.0,
+                "artifact_coverage": 0.0,
+                "evidence_precision": 0.0
+              },
+              "8000": {
+                "tokens": 5946,
+                "evidence_coverage": 0.0,
+                "artifact_coverage": 0.0,
+                "evidence_precision": 0.0
+              }
+            },
+            "canonical": {
+              "1000": {
+                "tokens": 954,
+                "evidence_coverage": 0.0,
+                "artifact_coverage": 0.0,
+                "evidence_precision": 0.0
+              },
+              "2000": {
+                "tokens": 1238,
+                "evidence_coverage": 0.0,
+                "artifact_coverage": 0.0,
+                "evidence_precision": 0.0
+              },
+              "4000": {
+                "tokens": 3862,
+                "evidence_coverage": 0.0,
+                "artifact_coverage": 0.0,
+                "evidence_precision": 0.0
+              },
+              "8000": {
+                "tokens": 5035,
+                "evidence_coverage": 0.0,
+                "artifact_coverage": 0.0,
+                "evidence_precision": 0.0
+              }
+            }
+          },
+          "cost_at_coverage": {
+            "native": {
+              "0.5": null,
+              "0.8": null,
+              "1.0": null
+            },
+            "canonical": {
+              "0.5": null,
+              "0.8": null,
+              "1.0": null
+            }
+          },
+          "collect": [],
+          "trace": [
+            {
+              "command": "query",
+              "native_tokens": 538,
+              "canonical_tokens": 227,
+              "utf8_bytes": 1631,
+              "byte_proxy_units": 408,
+              "results": 6,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 539,
+              "canonical_tokens": 491,
+              "utf8_bytes": 1744,
+              "byte_proxy_units": 436,
+              "results": 31,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 288,
+              "canonical_tokens": 236,
+              "utf8_bytes": 941,
+              "byte_proxy_units": 236,
+              "results": 8,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 337,
+              "canonical_tokens": 284,
+              "utf8_bytes": 1118,
+              "byte_proxy_units": 280,
+              "results": 14,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 1024,
+              "canonical_tokens": 969,
+              "utf8_bytes": 3558,
+              "byte_proxy_units": 890,
+              "results": 43,
+              "next_offset": 43
+            },
+            {
+              "command": "show",
+              "native_tokens": 670,
+              "canonical_tokens": 618,
+              "utf8_bytes": 2200,
+              "byte_proxy_units": 550,
+              "results": 41,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 1094,
+              "canonical_tokens": 1037,
+              "utf8_bytes": 3476,
+              "byte_proxy_units": 869,
+              "results": 64,
+              "next_offset": null
+            },
+            {
+              "command": "neighbors",
+              "native_tokens": 337,
+              "canonical_tokens": 158,
+              "utf8_bytes": 1123,
+              "byte_proxy_units": 281,
+              "results": 5,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 759,
+              "canonical_tokens": 708,
+              "utf8_bytes": 2525,
+              "byte_proxy_units": 632,
+              "results": 48,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 360,
+              "canonical_tokens": 307,
+              "utf8_bytes": 1147,
+              "byte_proxy_units": 287,
+              "results": 22,
+              "next_offset": null
+            }
+          ]
+        },
+        {
+          "id": "express-tests",
+          "kind": "test",
+          "query": "tests json escape HTML characters",
+          "hit1": 0,
+          "mrr5": 0.5,
+          "ndcg5": 0.6309297535714575,
+          "artifact_recall5": 1.0,
+          "first_relevant_rank": 2,
+          "top5": [
+            {
+              "path": "lib/response.js",
+              "start": 1114,
+              "end": 1154,
+              "title": "onstream"
+            },
+            {
+              "path": "test/res.json.js",
+              "start": 65,
+              "end": 128,
+              "title": "res.json.js preamble"
+            },
+            {
+              "path": "test/res.jsonp.js",
+              "start": 193,
+              "end": 256,
+              "title": "res.jsonp.js preamble"
+            },
+            {
+              "path": "History.md",
+              "start": 577,
+              "end": 640,
+              "title": "History.md preamble"
+            },
+            {
+              "path": "package.json",
+              "start": 1,
+              "end": 64,
+              "title": "package.json preamble"
+            }
+          ],
+          "negative_has_hits": null,
+          "assessment": null,
+          "curves": {
+            "native": {
+              "1000": {
+                "tokens": 535,
+                "evidence_coverage": 0.0,
+                "artifact_coverage": 0.0,
+                "evidence_precision": null
+              },
+              "2000": {
+                "tokens": 1213,
+                "evidence_coverage": 0.0,
+                "artifact_coverage": 0.0,
+                "evidence_precision": 0.0
+              },
+              "4000": {
+                "tokens": 3256,
+                "evidence_coverage": 1.0,
+                "artifact_coverage": 1.0,
+                "evidence_precision": 0.08029197080291971
+              },
+              "8000": {
+                "tokens": 7934,
+                "evidence_coverage": 1.0,
+                "artifact_coverage": 1.0,
+                "evidence_precision": 0.03343465045592705
+              }
+            },
+            "canonical": {
+              "1000": {
+                "tokens": 849,
+                "evidence_coverage": 0.0,
+                "artifact_coverage": 0.0,
+                "evidence_precision": 0.0
+              },
+              "2000": {
+                "tokens": 1796,
+                "evidence_coverage": 1.0,
+                "artifact_coverage": 1.0,
+                "evidence_precision": 0.12790697674418605
+              },
+              "4000": {
+                "tokens": 3884,
+                "evidence_coverage": 1.0,
+                "artifact_coverage": 1.0,
+                "evidence_precision": 0.05699481865284974
+              },
+              "8000": {
+                "tokens": 6915,
+                "evidence_coverage": 1.0,
+                "artifact_coverage": 1.0,
+                "evidence_precision": 0.03343465045592705
+              }
+            }
+          },
+          "cost_at_coverage": {
+            "native": {
+              "0.5": 2212,
+              "0.8": 2212,
+              "1.0": 2212
+            },
+            "canonical": {
+              "0.5": 1796,
+              "0.8": 1796,
+              "1.0": 1796
+            }
+          },
+          "collect": [],
+          "trace": [
+            {
+              "command": "query",
+              "native_tokens": 535,
+              "canonical_tokens": 224,
+              "utf8_bytes": 1552,
+              "byte_proxy_units": 388,
+              "results": 6,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 678,
+              "canonical_tokens": 625,
+              "utf8_bytes": 2141,
+              "byte_proxy_units": 536,
+              "results": 41,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 999,
+              "canonical_tokens": 947,
+              "utf8_bytes": 3473,
+              "byte_proxy_units": 869,
+              "results": 64,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 1044,
+              "canonical_tokens": 988,
+              "utf8_bytes": 3595,
+              "byte_proxy_units": 899,
+              "results": 64,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 1152,
+              "canonical_tokens": 1100,
+              "utf8_bytes": 3573,
+              "byte_proxy_units": 894,
+              "results": 61,
+              "next_offset": 61
+            },
+            {
+              "command": "show",
+              "native_tokens": 1277,
+              "canonical_tokens": 1228,
+              "utf8_bytes": 3575,
+              "byte_proxy_units": 894,
+              "results": 64,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 1176,
+              "canonical_tokens": 1124,
+              "utf8_bytes": 3579,
+              "byte_proxy_units": 895,
+              "results": 60,
+              "next_offset": 60
+            },
+            {
+              "command": "neighbors",
+              "native_tokens": 529,
+              "canonical_tokens": 239,
+              "utf8_bytes": 1675,
+              "byte_proxy_units": 419,
+              "results": 9,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 360,
+              "canonical_tokens": 310,
+              "utf8_bytes": 1101,
+              "byte_proxy_units": 276,
+              "results": 18,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 184,
+              "canonical_tokens": 130,
+              "utf8_bytes": 507,
+              "byte_proxy_units": 127,
+              "results": 5,
+              "next_offset": null
+            }
+          ]
+        },
+        {
+          "id": "express-json",
+          "kind": "multi",
+          "query": "How is json escape applied and tested?",
+          "hit1": 1,
+          "mrr5": 1.0,
+          "ndcg5": 0.8772153153380493,
+          "artifact_recall5": 1.0,
+          "first_relevant_rank": 1,
+          "top5": [
+            {
+              "path": "test/res.json.js",
+              "start": 65,
+              "end": 128,
+              "title": "res.json.js preamble"
+            },
+            {
+              "path": "lib/response.js",
+              "start": 1155,
+              "end": 1179,
+              "title": "stringify"
+            },
+            {
+              "path": "test/res.jsonp.js",
+              "start": 257,
+              "end": 320,
+              "title": "res.jsonp.js preamble"
+            },
+            {
+              "path": "lib/response.js",
+              "start": 244,
+              "end": 307,
+              "title": "generateETag"
+            },
+            {
+              "path": "test/res.jsonp.js",
+              "start": 193,
+              "end": 256,
+              "title": "res.jsonp.js preamble"
+            }
+          ],
+          "negative_has_hits": null,
+          "assessment": null,
+          "curves": {
+            "native": {
+              "1000": {
+                "tokens": 514,
+                "evidence_coverage": 0.0,
+                "artifact_coverage": 0.0,
+                "evidence_precision": null
+              },
+              "2000": {
+                "tokens": 1513,
+                "evidence_coverage": 0.6470588235294118,
+                "artifact_coverage": 0.5,
+                "evidence_precision": 0.21568627450980393
+              },
+              "4000": {
+                "tokens": 3041,
+                "evidence_coverage": 0.6470588235294118,
+                "artifact_coverage": 0.5,
+                "evidence_precision": 0.08943089430894309
+              },
+              "8000": {
+                "tokens": 6153,
+                "evidence_coverage": 1.0,
+                "artifact_coverage": 1.0,
+                "evidence_precision": 0.060714285714285714
+              }
+            },
+            "canonical": {
+              "1000": {
+                "tokens": 195,
+                "evidence_coverage": 0.0,
+                "artifact_coverage": 0.0,
+                "evidence_precision": null
+              },
+              "2000": {
+                "tokens": 1593,
+                "evidence_coverage": 0.6470588235294118,
+                "artifact_coverage": 0.5,
+                "evidence_precision": 0.14864864864864866
+              },
+              "4000": {
+                "tokens": 3519,
+                "evidence_coverage": 1.0,
+                "artifact_coverage": 1.0,
+                "evidence_precision": 0.09497206703910614
+              },
+              "8000": {
+                "tokens": 5480,
+                "evidence_coverage": 1.0,
+                "artifact_coverage": 1.0,
+                "evidence_precision": 0.060714285714285714
+              }
+            }
+          },
+          "cost_at_coverage": {
+            "native": {
+              "0.5": 1513,
+              "0.8": 4047,
+              "1.0": 4047
+            },
+            "canonical": {
+              "0.5": 1142,
+              "0.8": 3519,
+              "1.0": 3519
+            }
+          },
+          "collect": [],
+          "trace": [
+            {
+              "command": "query",
+              "native_tokens": 514,
+              "canonical_tokens": 195,
+              "utf8_bytes": 1479,
+              "byte_proxy_units": 370,
+              "results": 6,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 999,
+              "canonical_tokens": 947,
+              "utf8_bytes": 3473,
+              "byte_proxy_units": 869,
+              "results": 64,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 504,
+              "canonical_tokens": 451,
+              "utf8_bytes": 1588,
+              "byte_proxy_units": 397,
+              "results": 25,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 1024,
+              "canonical_tokens": 972,
+              "utf8_bytes": 3519,
+              "byte_proxy_units": 880,
+              "results": 64,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 1006,
+              "canonical_tokens": 954,
+              "utf8_bytes": 3376,
+              "byte_proxy_units": 844,
+              "results": 64,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 1044,
+              "canonical_tokens": 988,
+              "utf8_bytes": 3595,
+              "byte_proxy_units": 899,
+              "results": 64,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 994,
+              "canonical_tokens": 942,
+              "utf8_bytes": 3439,
+              "byte_proxy_units": 860,
+              "results": 64,
+              "next_offset": null
+            },
+            {
+              "command": "neighbors",
+              "native_tokens": 68,
+              "canonical_tokens": 31,
+              "utf8_bytes": 193,
+              "byte_proxy_units": 49,
+              "results": 0,
+              "next_offset": null
+            }
+          ]
+        },
+        {
+          "id": "express-proxy",
+          "kind": "multi",
+          "query": "How does trust proxy hop count affect req.ip?",
+          "hit1": 1,
+          "mrr5": 1.0,
+          "ndcg5": 0.46927872602275644,
+          "artifact_recall5": 0.3333333333333333,
+          "first_relevant_rank": 1,
+          "top5": [
+            {
+              "path": "test/req.ip.js",
+              "start": 1,
+              "end": 64,
+              "title": "req.ip.js preamble"
+            },
+            {
+              "path": "test/req.secure.js",
+              "start": 65,
+              "end": 101,
+              "title": "req.secure.js preamble"
+            },
+            {
+              "path": "test/req.protocol.js",
+              "start": 65,
+              "end": 113,
+              "title": "req.protocol.js preamble"
+            },
+            {
+              "path": "test/req.host.js",
+              "start": 65,
+              "end": 128,
+              "title": "req.host.js preamble"
+            },
+            {
+              "path": "History.md",
+              "start": 1409,
+              "end": 1472,
+              "title": "History.md preamble"
+            }
+          ],
+          "negative_has_hits": null,
+          "assessment": null,
+          "curves": {
+            "native": {
+              "1000": {
+                "tokens": 532,
+                "evidence_coverage": 0.0,
+                "artifact_coverage": 0.0,
+                "evidence_precision": null
+              },
+              "2000": {
+                "tokens": 1570,
+                "evidence_coverage": 0.3333333333333333,
+                "artifact_coverage": 0.3333333333333333,
+                "evidence_precision": 0.20833333333333334
+              },
+              "4000": {
+                "tokens": 3848,
+                "evidence_coverage": 0.3333333333333333,
+                "artifact_coverage": 0.3333333333333333,
+                "evidence_precision": 0.06134969325153374
+              },
+              "8000": {
+                "tokens": 7025,
+                "evidence_coverage": 0.3333333333333333,
+                "artifact_coverage": 0.3333333333333333,
+                "evidence_precision": 0.034482758620689655
+              }
+            },
+            "canonical": {
+              "1000": {
+                "tokens": 216,
+                "evidence_coverage": 0.0,
+                "artifact_coverage": 0.0,
+                "evidence_precision": null
+              },
+              "2000": {
+                "tokens": 1752,
+                "evidence_coverage": 0.3333333333333333,
+                "artifact_coverage": 0.3333333333333333,
+                "evidence_precision": 0.12987012987012986
+              },
+              "4000": {
+                "tokens": 3324,
+                "evidence_coverage": 0.3333333333333333,
+                "artifact_coverage": 0.3333333333333333,
+                "evidence_precision": 0.06134969325153374
+              },
+              "8000": {
+                "tokens": 6191,
+                "evidence_coverage": 0.3333333333333333,
+                "artifact_coverage": 0.3333333333333333,
+                "evidence_precision": 0.034482758620689655
+              }
+            }
+          },
+          "cost_at_coverage": {
+            "native": {
+              "0.5": null,
+              "0.8": null,
+              "1.0": null
+            },
+            "canonical": {
+              "0.5": null,
+              "0.8": null,
+              "1.0": null
+            }
+          },
+          "collect": [],
+          "trace": [
+            {
+              "command": "query",
+              "native_tokens": 532,
+              "canonical_tokens": 216,
+              "utf8_bytes": 1568,
+              "byte_proxy_units": 392,
+              "results": 6,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 1038,
+              "canonical_tokens": 985,
+              "utf8_bytes": 3440,
+              "byte_proxy_units": 860,
+              "results": 64,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 605,
+              "canonical_tokens": 551,
+              "utf8_bytes": 2004,
+              "byte_proxy_units": 501,
+              "results": 37,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 721,
+              "canonical_tokens": 670,
+              "utf8_bytes": 2476,
+              "byte_proxy_units": 619,
+              "results": 49,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 952,
+              "canonical_tokens": 902,
+              "utf8_bytes": 3253,
+              "byte_proxy_units": 814,
+              "results": 64,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 1156,
+              "canonical_tokens": 1103,
+              "utf8_bytes": 3580,
+              "byte_proxy_units": 895,
+              "results": 56,
+              "next_offset": 56
+            },
+            {
+              "command": "show",
+              "native_tokens": 1191,
+              "canonical_tokens": 1138,
+              "utf8_bytes": 3597,
+              "byte_proxy_units": 900,
+              "results": 61,
+              "next_offset": 61
+            },
+            {
+              "command": "neighbors",
+              "native_tokens": 182,
+              "canonical_tokens": 82,
+              "utf8_bytes": 555,
+              "byte_proxy_units": 139,
+              "results": 2,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 229,
+              "canonical_tokens": 179,
+              "utf8_bytes": 651,
+              "byte_proxy_units": 163,
+              "results": 8,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 419,
+              "canonical_tokens": 365,
+              "utf8_bytes": 1255,
+              "byte_proxy_units": 314,
+              "results": 22,
+              "next_offset": null
+            }
+          ]
+        },
+        {
+          "id": "express-template",
+          "kind": "template",
+          "query": "Where is the login form username password markup?",
+          "hit1": 0,
+          "mrr5": 0,
+          "ndcg5": 0.0,
+          "artifact_recall5": 0.0,
+          "first_relevant_rank": null,
+          "top5": [
+            {
+              "path": "test/acceptance/auth.js",
+              "start": 4,
+              "end": 67,
+              "title": "getCookie"
+            },
+            {
+              "path": "test/acceptance/auth.js",
+              "start": 68,
+              "end": 117,
+              "title": "getCookie"
+            },
+            {
+              "path": "examples/auth/index.js",
+              "start": 75,
+              "end": 133,
+              "title": "restrict"
+            },
+            {
+              "path": "Release-Process.md",
+              "start": 182,
+              "end": 194,
+              "title": "Step 6. Publish to npmjs.com"
+            },
+            {
+              "path": "examples/auth/index.js",
+              "start": 60,
+              "end": 74,
+              "title": "authenticate"
+            }
+          ],
+          "negative_has_hits": null,
+          "assessment": null,
+          "curves": {
+            "native": {
+              "1000": {
+                "tokens": 514,
+                "evidence_coverage": 0.0,
+                "artifact_coverage": 0.0,
+                "evidence_precision": null
+              },
+              "2000": {
+                "tokens": 1528,
+                "evidence_coverage": 0.0,
+                "artifact_coverage": 0.0,
+                "evidence_precision": 0.0
+              },
+              "4000": {
+                "tokens": 3462,
+                "evidence_coverage": 0.0,
+                "artifact_coverage": 0.0,
+                "evidence_precision": 0.0
+              },
+              "8000": {
+                "tokens": 5898,
+                "evidence_coverage": 0.0,
+                "artifact_coverage": 0.0,
+                "evidence_precision": 0.0
+              }
+            },
+            "canonical": {
+              "1000": {
+                "tokens": 209,
+                "evidence_coverage": 0.0,
+                "artifact_coverage": 0.0,
+                "evidence_precision": null
+              },
+              "2000": {
+                "tokens": 1173,
+                "evidence_coverage": 0.0,
+                "artifact_coverage": 0.0,
+                "evidence_precision": 0.0
+              },
+              "4000": {
+                "tokens": 3707,
+                "evidence_coverage": 0.0,
+                "artifact_coverage": 0.0,
+                "evidence_precision": 0.0
+              },
+              "8000": {
+                "tokens": 5129,
+                "evidence_coverage": 0.0,
+                "artifact_coverage": 0.0,
+                "evidence_precision": 0.0
+              }
+            }
+          },
+          "cost_at_coverage": {
+            "native": {
+              "0.5": null,
+              "0.8": null,
+              "1.0": null
+            },
+            "canonical": {
+              "0.5": null,
+              "0.8": null,
+              "1.0": null
+            }
+          },
+          "collect": [],
+          "trace": [
+            {
+              "command": "query",
+              "native_tokens": 514,
+              "canonical_tokens": 209,
+              "utf8_bytes": 1538,
+              "byte_proxy_units": 385,
+              "results": 6,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 1014,
+              "canonical_tokens": 964,
+              "utf8_bytes": 3390,
+              "byte_proxy_units": 848,
+              "results": 64,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 936,
+              "canonical_tokens": 888,
+              "utf8_bytes": 3246,
+              "byte_proxy_units": 812,
+              "results": 59,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 302,
+              "canonical_tokens": 242,
+              "utf8_bytes": 963,
+              "byte_proxy_units": 241,
+              "results": 13,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 696,
+              "canonical_tokens": 647,
+              "utf8_bytes": 2532,
+              "byte_proxy_units": 633,
+              "results": 29,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 807,
+              "canonical_tokens": 757,
+              "utf8_bytes": 2681,
+              "byte_proxy_units": 671,
+              "results": 50,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 379,
+              "canonical_tokens": 330,
+              "utf8_bytes": 1200,
+              "byte_proxy_units": 300,
+              "results": 15,
+              "next_offset": null
+            },
+            {
+              "command": "neighbors",
+              "native_tokens": 214,
+              "canonical_tokens": 104,
+              "utf8_bytes": 686,
+              "byte_proxy_units": 172,
+              "results": 3,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 1036,
+              "canonical_tokens": 988,
+              "utf8_bytes": 3501,
+              "byte_proxy_units": 876,
+              "results": 64,
+              "next_offset": null
+            }
+          ]
+        },
+        {
+          "id": "express-config",
+          "kind": "config",
+          "query": "Which mocha command requires the test support environment?",
+          "hit1": 0,
+          "mrr5": 0.5,
+          "ndcg5": 0.38685280723454163,
+          "artifact_recall5": 0.5,
+          "first_relevant_rank": 2,
+          "top5": [
+            {
+              "path": "appveyor.yml",
+              "start": 1,
+              "end": 64,
+              "title": "appveyor.yml preamble"
+            },
+            {
+              "path": "package.json",
+              "start": 65,
+              "end": 102,
+              "title": "package.json preamble"
+            },
+            {
+              "path": ".github/workflows/iojs.yml",
+              "start": 1,
+              "end": 64,
+              "title": "iojs.yml preamble"
+            },
+            {
+              "path": ".github/workflows/ci.yml",
+              "start": 65,
+              "end": 128,
+              "title": "ci.yml preamble"
+            },
+            {
+              "path": "Readme-Guide.md",
+              "start": 44,
+              "end": 56,
+              "title": "Installation"
+            }
+          ],
+          "negative_has_hits": null,
+          "assessment": null,
+          "curves": {
+            "native": {
+              "1000": {
+                "tokens": 567,
+                "evidence_coverage": 0.0,
+                "artifact_coverage": 0.0,
+                "evidence_precision": null
+              },
+              "2000": {
+                "tokens": 1965,
+                "evidence_coverage": 0.0,
+                "artifact_coverage": 0.0,
+                "evidence_precision": 0.0
+              },
+              "4000": {
+                "tokens": 3880,
+                "evidence_coverage": 0.6666666666666666,
+                "artifact_coverage": 0.5,
+                "evidence_precision": 0.02564102564102564
+              },
+              "8000": {
+                "tokens": 6922,
+                "evidence_coverage": 0.6666666666666666,
+                "artifact_coverage": 0.5,
+                "evidence_precision": 0.014285714285714285
+              }
+            },
+            "canonical": {
+              "1000": {
+                "tokens": 243,
+                "evidence_coverage": 0.0,
+                "artifact_coverage": 0.0,
+                "evidence_precision": null
+              },
+              "2000": {
+                "tokens": 1537,
+                "evidence_coverage": 0.0,
+                "artifact_coverage": 0.0,
+                "evidence_precision": 0.0
+              },
+              "4000": {
+                "tokens": 3348,
+                "evidence_coverage": 0.6666666666666666,
+                "artifact_coverage": 0.5,
+                "evidence_precision": 0.02564102564102564
+              },
+              "8000": {
+                "tokens": 6124,
+                "evidence_coverage": 0.6666666666666666,
+                "artifact_coverage": 0.5,
+                "evidence_precision": 0.014285714285714285
+              }
+            }
+          },
+          "cost_at_coverage": {
+            "native": {
+              "0.5": 2789,
+              "0.8": null,
+              "1.0": null
+            },
+            "canonical": {
+              "0.5": 2309,
+              "0.8": null,
+              "1.0": null
+            }
+          },
+          "collect": [],
+          "trace": [
+            {
+              "command": "query",
+              "native_tokens": 567,
+              "canonical_tokens": 243,
+              "utf8_bytes": 1585,
+              "byte_proxy_units": 397,
+              "results": 6,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 1157,
+              "canonical_tokens": 1105,
+              "utf8_bytes": 3556,
+              "byte_proxy_units": 889,
+              "results": 60,
+              "next_offset": 60
+            },
+            {
+              "command": "show-page",
+              "native_tokens": 241,
+              "canonical_tokens": 189,
+              "utf8_bytes": 659,
+              "byte_proxy_units": 165,
+              "results": 4,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 824,
+              "canonical_tokens": 772,
+              "utf8_bytes": 2355,
+              "byte_proxy_units": 589,
+              "results": 38,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 1091,
+              "canonical_tokens": 1039,
+              "utf8_bytes": 3414,
+              "byte_proxy_units": 854,
+              "results": 64,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 1159,
+              "canonical_tokens": 1106,
+              "utf8_bytes": 3561,
+              "byte_proxy_units": 891,
+              "results": 61,
+              "next_offset": 61
+            },
+            {
+              "command": "show",
+              "native_tokens": 266,
+              "canonical_tokens": 214,
+              "utf8_bytes": 840,
+              "byte_proxy_units": 210,
+              "results": 13,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 432,
+              "canonical_tokens": 381,
+              "utf8_bytes": 1450,
+              "byte_proxy_units": 363,
+              "results": 21,
+              "next_offset": null
+            },
+            {
+              "command": "neighbors",
+              "native_tokens": 118,
+              "canonical_tokens": 55,
+              "utf8_bytes": 366,
+              "byte_proxy_units": 92,
+              "results": 1,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 1067,
+              "canonical_tokens": 1020,
+              "utf8_bytes": 3532,
+              "byte_proxy_units": 883,
+              "results": 64,
+              "next_offset": null
+            }
+          ]
+        },
+        {
+          "id": "express-negative-id",
+          "kind": "negative",
+          "query": "QuantumLedgerReconciler",
+          "hit1": 0,
+          "mrr5": 0,
+          "ndcg5": null,
+          "artifact_recall5": null,
+          "first_relevant_rank": null,
+          "top5": [],
+          "negative_has_hits": false,
+          "assessment": null,
+          "curves": {
+            "native": {
+              "1000": {
+                "tokens": 62,
+                "evidence_coverage": null,
+                "artifact_coverage": null,
+                "evidence_precision": null
+              },
+              "2000": {
+                "tokens": 62,
+                "evidence_coverage": null,
+                "artifact_coverage": null,
+                "evidence_precision": null
+              },
+              "4000": {
+                "tokens": 62,
+                "evidence_coverage": null,
+                "artifact_coverage": null,
+                "evidence_precision": null
+              },
+              "8000": {
+                "tokens": 62,
+                "evidence_coverage": null,
+                "artifact_coverage": null,
+                "evidence_precision": null
+              }
+            },
+            "canonical": {
+              "1000": {
+                "tokens": 31,
+                "evidence_coverage": null,
+                "artifact_coverage": null,
+                "evidence_precision": null
+              },
+              "2000": {
+                "tokens": 31,
+                "evidence_coverage": null,
+                "artifact_coverage": null,
+                "evidence_precision": null
+              },
+              "4000": {
+                "tokens": 31,
+                "evidence_coverage": null,
+                "artifact_coverage": null,
+                "evidence_precision": null
+              },
+              "8000": {
+                "tokens": 31,
+                "evidence_coverage": null,
+                "artifact_coverage": null,
+                "evidence_precision": null
+              }
+            }
+          },
+          "cost_at_coverage": {
+            "native": {
+              "0.5": null,
+              "0.8": null,
+              "1.0": null
+            },
+            "canonical": {
+              "0.5": null,
+              "0.8": null,
+              "1.0": null
+            }
+          },
+          "collect": [],
+          "trace": [
+            {
+              "command": "query",
+              "native_tokens": 62,
+              "canonical_tokens": 31,
+              "utf8_bytes": 195,
+              "byte_proxy_units": 49,
+              "results": 0,
+              "next_offset": null
+            }
+          ]
+        },
+        {
+          "id": "express-negative-topic",
+          "kind": "negative",
+          "query": "How does the router persist routes in a PostgreSQL transaction?",
+          "hit1": 0,
+          "mrr5": 0,
+          "ndcg5": null,
+          "artifact_recall5": null,
+          "first_relevant_rank": null,
+          "top5": [
+            {
+              "path": "History.md",
+              "start": 1281,
+              "end": 1344,
+              "title": "History.md preamble"
+            },
+            {
+              "path": "test/Router.js",
+              "start": 65,
+              "end": 93,
+              "title": "Router.js preamble"
+            },
+            {
+              "path": "lib/router/index.js",
+              "start": 462,
+              "end": 525,
+              "title": "paramCallback"
+            },
+            {
+              "path": "lib/router/index.js",
+              "start": 241,
+              "end": 292,
+              "title": "next"
+            },
+            {
+              "path": "lib/application.js",
+              "start": 129,
+              "end": 192,
+              "title": "application.js preamble"
+            }
+          ],
+          "negative_has_hits": true,
+          "assessment": null,
+          "curves": {
+            "native": {
+              "1000": {
+                "tokens": 502,
+                "evidence_coverage": null,
+                "artifact_coverage": null,
+                "evidence_precision": null
+              },
+              "2000": {
+                "tokens": 1867,
+                "evidence_coverage": null,
+                "artifact_coverage": null,
+                "evidence_precision": null
+              },
+              "4000": {
+                "tokens": 3310,
+                "evidence_coverage": null,
+                "artifact_coverage": null,
+                "evidence_precision": null
+              },
+              "8000": {
+                "tokens": 7131,
+                "evidence_coverage": null,
+                "artifact_coverage": null,
+                "evidence_precision": null
+              }
+            },
+            "canonical": {
+              "1000": {
+                "tokens": 189,
+                "evidence_coverage": null,
+                "artifact_coverage": null,
+                "evidence_precision": null
+              },
+              "2000": {
+                "tokens": 1935,
+                "evidence_coverage": null,
+                "artifact_coverage": null,
+                "evidence_precision": null
+              },
+              "4000": {
+                "tokens": 3695,
+                "evidence_coverage": null,
+                "artifact_coverage": null,
+                "evidence_precision": null
+              },
+              "8000": {
+                "tokens": 6174,
+                "evidence_coverage": null,
+                "artifact_coverage": null,
+                "evidence_precision": null
+              }
+            }
+          },
+          "cost_at_coverage": {
+            "native": {
+              "0.5": null,
+              "0.8": null,
+              "1.0": null
+            },
+            "canonical": {
+              "0.5": null,
+              "0.8": null,
+              "1.0": null
+            }
+          },
+          "collect": [],
+          "trace": [
+            {
+              "command": "query",
+              "native_tokens": 502,
+              "canonical_tokens": 189,
+              "utf8_bytes": 1497,
+              "byte_proxy_units": 375,
+              "results": 6,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 1148,
+              "canonical_tokens": 1095,
+              "utf8_bytes": 3599,
+              "byte_proxy_units": 900,
+              "results": 59,
+              "next_offset": 59
+            },
+            {
+              "command": "show-page",
+              "native_tokens": 217,
+              "canonical_tokens": 164,
+              "utf8_bytes": 589,
+              "byte_proxy_units": 148,
+              "results": 5,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 536,
+              "canonical_tokens": 487,
+              "utf8_bytes": 1743,
+              "byte_proxy_units": 436,
+              "results": 29,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 907,
+              "canonical_tokens": 855,
+              "utf8_bytes": 3118,
+              "byte_proxy_units": 780,
+              "results": 64,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 956,
+              "canonical_tokens": 905,
+              "utf8_bytes": 3337,
+              "byte_proxy_units": 835,
+              "results": 64,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 765,
+              "canonical_tokens": 715,
+              "utf8_bytes": 2661,
+              "byte_proxy_units": 666,
+              "results": 52,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 973,
+              "canonical_tokens": 924,
+              "utf8_bytes": 3324,
+              "byte_proxy_units": 831,
+              "results": 64,
+              "next_offset": null
+            },
+            {
+              "command": "neighbors",
+              "native_tokens": 337,
+              "canonical_tokens": 152,
+              "utf8_bytes": 1098,
+              "byte_proxy_units": 275,
+              "results": 5,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 595,
+              "canonical_tokens": 546,
+              "utf8_bytes": 1892,
+              "byte_proxy_units": 473,
+              "results": 39,
+              "next_offset": null
+            },
+            {
+              "command": "show",
+              "native_tokens": 195,
+              "canonical_tokens": 142,
+              "utf8_bytes": 566,
+              "byte_proxy_units": 142,
+              "results": 5,
+              "next_offset": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
