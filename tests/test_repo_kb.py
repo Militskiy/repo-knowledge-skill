@@ -60,6 +60,14 @@ func TestReset(t *testing.T) {
         path.write_text(content, encoding='utf-8')
         return path
 
+    def symlink(self, link, target, directory=False):
+        try:
+            link.symlink_to(target, target_is_directory=directory)
+        except OSError as exc:
+            if getattr(exc, 'winerror', None) == 1314:
+                self.skipTest('Windows account lacks symlink privilege')
+            raise
+
     def build(self):
         return kb.build(self.root, self.out, filesystem=True)
 
@@ -200,8 +208,8 @@ func TestReset(t *testing.T) {
     def test_symlink_files_and_directories_not_followed(self):
         outside = self.out.parent / 'outside.py'
         outside.write_text('EXTERNAL_SECRET = 1\n')
-        (self.root / 'link.py').symlink_to(outside)
-        (self.root / 'linked-dir').symlink_to(self.out.parent, target_is_directory=True)
+        self.symlink(self.root / 'link.py', outside)
+        self.symlink(self.root / 'linked-dir', self.out.parent, True)
         self.assertEqual(self.build()['files'], 5)
 
     def test_unsafe_paths_rejected(self):
@@ -218,7 +226,7 @@ func TestReset(t *testing.T) {
         self.assertEqual(kb.main(['--repo', str(self.root), '--output', str(self.root), 'build', '--filesystem']), 2)
 
     def test_output_symlink_refused(self):
-        self.out.symlink_to(self.root, target_is_directory=True)
+        self.symlink(self.out, self.root, True)
         self.assertEqual(self.cli('build', '--filesystem')[0], 2)
 
     def test_lock_does_not_get_removed_by_other_builder(self):
@@ -289,9 +297,9 @@ func TestReset(t *testing.T) {
         self.write('ignored.py', 'ignored\n')
         self.write('untracked.py', 'untracked\n')
         first = kb.build(self.root, self.out)
-        self.assertEqual(first['files'], 5)
+        self.assertEqual(first['files'], 6)  # .gitignore is useful project configuration.
         second = kb.build(self.root, self.out, untracked=True)
-        self.assertEqual(second['files'], 6)
+        self.assertEqual(second['files'], 7)
         with contextlib.closing(self.db()) as db:
             self.assertFalse(db.execute("SELECT 1 FROM files WHERE path='ignored.py'").fetchone())
 
@@ -380,7 +388,7 @@ func TestReset(t *testing.T) {
         pointer.write_text(before)
         folder, _ = kb.current(self.out)
         (folder / 'index.sqlite3').unlink()
-        (folder / 'index.sqlite3').symlink_to(self.root / 'README.md')
+        self.symlink(folder / 'index.sqlite3', self.root / 'README.md')
         self.assertEqual(self.cli('query', 'client')[0], 2)
 
     def test_scope_overflow_fails_explicitly(self):
